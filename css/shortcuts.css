@@ -1,0 +1,131 @@
+.shortcuts{
+    position: fixed;
+    right: -300px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: white;
+    z-index: 1000;
+}
+
+.shortcuts .shortcut{
+    width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px 0 0 20px;
+    background: var(--accent-color-dark);
+    transition: all 1s;
+}
+
+
+/* open animation */
+.shortcuts .shortcut.tel:hover,
+.shortcuts .shortcut.location:hover,
+.shortcuts .shortcut.öffnungszeiten:hover{
+    transform: translateX(-300px);
+}
+
+.shortcuts .shortcut.öffnungszeiten:hover{
+    height: 370px;
+}
+
+.shortcuts .shortcut i{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+}
+
+/* centers shortcut text */
+.shortcuts .shortcut a,
+.shortcuts .shortcut span{
+    margin: auto;
+}
+
+.shortcuts .shortcut.öffnungszeiten{
+    background: none;
+    height: 50px;
+    display: block;
+    overflow: hidden;
+}
+
+.shortcuts .shortcut.öffnungszeiten .bar{
+    display: flex;
+    background: var(--accent-color-dark);
+    border-radius: 20px 0 0 0;
+    transition: background 1s;
+}
+
+.shortcuts .shortcut.öffnungszeiten .details{
+    width: 350px;
+    background: var(--accent-color-dark);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 0 0 0 20px;
+    transition: background 1s;
+}
+
+.shortcuts .shortcut.öffnungszeiten .details .saisondauer{
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--accent-color);
+}
+
+.shortcuts .shortcut.öffnungszeiten .details .spacer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: auto;
+}
+
+.shortcuts .shortcut.öffnungszeiten .details .spacer li.ruhetag{
+    color: var(--accent-color);
+}
+
+.shortcuts .shortcut.öffnungszeiten .details .spacer li.warme-küche{
+    margin-top: 30px;
+}
+
+
+
+
+
+
+
+
+/* Animations on page load */
+.shortcuts .shortcut{
+    animation: slideIn var(--animation-dur);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 850px){
+    .shortcuts .shortcut i{
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+        transform: translateX(1px);
+    }
+    .shortcuts .shortcut{
+        width: 340px;
+    }
+    .shortcuts .shortcut.öffnungszeiten{
+        height: 40px;
+    }
+}

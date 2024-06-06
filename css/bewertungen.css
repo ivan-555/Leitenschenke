@@ -1,0 +1,159 @@
+.bewertungen{
+    padding-top: var(--section-padding-top);
+    scroll-margin-top: var(--header-height);
+    padding-bottom: 150px;
+}
+
+.bewertungen .top{
+    padding: 0 20%;
+    margin-bottom: 150px;
+}
+
+.bewertungen .top .small-br{
+    display: none;
+}
+
+
+.bewertungen .top > span{
+    font-size: 1.3rem;
+    color: var(--accent-color-alt);
+}
+
+.bewertungen h2{
+    margin-bottom: var(--title-mb);
+}
+
+.bewertungen .top p{
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.bewertungen .gesamtwertung{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.bewertungen .gesamtwertung span,
+.bewertungen .gesamtwertung i{
+    font-size: .9rem;
+    color: rgba(0, 0, 0, 0.794);
+}
+
+.bewertungen .gesamtwertung i{
+    color: var(--accent-color-alt);
+}
+
+.bewertungen .bewertung{
+    background: rgba(0, 0, 0, 0.164);
+    text-align: center;
+    padding: 50px;
+    border-radius: 200px;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    display: block;
+    margin-bottom: 30px;
+}
+
+.bewertungen .bewertung.bewertung:nth-child(2n + 1){
+    background: #3d361e25;
+}
+
+.bewertungen .bewertung h4{
+    margin-bottom: 30px;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.bewertungen .bewertung p{
+    width: 70%;
+    margin: auto;
+    font-family: "Biem Hand";
+    font-size: 1.2rem;
+}
+
+.bewertungen .mehr-anzeigen{
+    margin-top: 50px;
+    text-align: center;
+}
+
+.bewertungen .mehr-anzeigen span,
+.bewertungen .mehr-anzeigen i{
+    color: rgba(0, 0, 0, 0.794);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 1s;
+    display: inline-block;
+}
+
+.bewertungen .mehr-anzeigen i.rotated{
+    transform: rotate(180deg);
+}
+
+.bewertungen .mehr-bewertungen{
+    height: 0;
+    overflow: hidden;
+    transition: height 1s;
+}
+
+.bewertungen .mehr-bewertungen .bewertung{
+    transition: opacity 0.5s;
+}
+
+
+
+@media (max-width: 1700px){
+    .bewertungen .top{
+        text-align: center;
+        padding: 0 20px;
+        margin-bottom: 100px;
+    }
+    .bewertungen .gesamtwertung{
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1120px) {
+    .bewertungen .bewertung p{
+        width: 80%;
+    }
+}
+
+@media (max-width: 1050px){
+    .bewertungen .top .small-br{
+        display: block;
+    }
+}
+@media (max-width: 650px){
+    .bewertungen .top .small-br{
+        display: none;
+    }
+    .bewertungen .top .big-br{
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .bewertungen .bewertung{
+        border-radius: 100px;
+    }
+    .bewertungen .bewertung p{
+        width: 100%;
+    }
+}
+@media (max-width: 550px){
+    .bewertungen .top h2{
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .bewertungen .bewertung h4{
+        font-size: 1.3rem;
+    }
+    .bewertungen .bewertung p{
+        font-size: 1.14rem;
+    }
+}
+

@@ -1,0 +1,91 @@
+.footer{
+    background: rgb(41, 41, 41);
+    color: white;
+    padding: 50px;
+}
+
+.footer .grid-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.footer .spacer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+.footer ul .wrapper{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.footer ul li{
+    transition: all 0.3s;
+}
+
+.footer ul li b{
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.footer ul li i{
+    font-size: 1.6rem;
+    transition: all 0.3s;
+}
+
+.footer ul li i.bxl-trip-advisor{
+    font-size: 2rem;
+}
+
+.footer ul li i:hover{
+    color: var(--accent-color);
+}
+
+.footer ul li.ruhetag{
+    color: var(--accent-color);
+}
+
+.footer ul li a.tel{
+    color: var(--accent-color);
+}
+
+.footer ul li.saisondauer{
+    color: var(--accent-color);
+    margin-bottom: 10px;
+}
+
+.footer .spacer:nth-child(1) li i{
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
+.footer .impressum-link{
+    color: rgba(255, 255, 255, 0.504);
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+
+@media (max-width: 1400px){
+    .footer .grid-container{
+        grid-template-columns: repeat(1, 400px);
+        place-content: center;
+        gap: 80px;
+        text-align: center;
+    }
+    .footer .spacer:nth-child(2) ul .wrapper{
+        text-align: left;
+    }
+}

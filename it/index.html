@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ristorante panoramico Leitenschenke al Sentiero di Rogge - Ristorante Leitenschenke</title>
+    <meta name="description" content="Vi viziamo con piatti tradizionali dell'Alto Adige fatti in casa con una vista panoramica unica sulla Valle dell'Adige. Sonja e Tobias vi danno un caloroso benvenuto alla Leitenschenke">
+    <meta name="keywords" content="Leitenschenke, ristorante leitenschenke, ristorante al sentiero delle rogge, marlinger waalweg">
+    <!-- theme color for searchbar -->
+    <meta name="theme-color" content="red">
+    <!-- Anweisung an Suchmaschinen -->
+    <meta name="robots" content="index, follow">
+    <!-- JSON-LD for Schema Markup -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Restaurant",
+          "name": "Ristorante panoramico Leitenschenke",
+          "@id": "https://leitenschenke.it",
+          "url": "https://leitenschenke.it",
+          "telephone": "+393338563472",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Sentiero Leiten 9",
+            "addressLocality": "Cermes",
+            "postalCode": "39010",
+            "addressCountry": "IT"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 46.634255580626196,
+            "longitude": 11.138420199396199
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Sunday"
+              ],
+              "opens": "10:30",
+              "closes": "17:00"
+            }
+          ]
+        }
+    </script>
+    <!-- Language Settings -->
+    <link rel="alternate" href="https://leitenschenke.it/" hreflang="de">
+    <link rel="alternate" href="https://leitenschenke.it/it/" hreflang="it">
+    <link rel="alternate" hreflang="x-default" href="https://leitenschenke.it/">
+    <!-- Language Cookies -->
+    <script>
+        function setLanguageCookie(lang) {
+            var d = new Date();
+            d.setTime(d.getTime() + (1 * 24 * 60 * 60 * 1000)); // Cookie-Gültigkeit: 1 Tag
+            var expires = "expires=" + d.toUTCString();
+            document.cookie = "site_language=" + lang + ";" + expires + ";path=/";
+        }
+
+        function getLanguageCookie() {
+            var name = "site_language=";
+            var decodedCookie = decodeURIComponent(document.cookie);
+            var ca = decodedCookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+
+        // Beispiel: Setze die Sprache auf "de" (Deutsch)
+        setLanguageCookie('de');
+
+        // Beispiel: Hole die gespeicherte Sprache
+        var userLanguage = getLanguageCookie();
+        console.log("User Language:", userLanguage);
+    </script>
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://leitenschenke.it/it/">
+    <!-- Favicon -->
+    <link rel="icon" href="../img/favicon.png" type="image/png">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../css/root.css">
+    <link rel="stylesheet" href="../../css/header.css">
+    <link rel="stylesheet" href="../../css/shortcuts.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/küche.css">
+    <link rel="stylesheet" href="../../css/produkte.css">
+    <link rel="stylesheet" href="../../css/familie.css">
+    <link rel="stylesheet" href="../../css/bewertungen.css">
+    <link rel="stylesheet" href="../../css/footer.css">
+    <!-- Custom JS -->
+    <script src="../js/header.js" defer></script>
+    <script src="../js/küche.js" defer></script>
+    <script src="../js/landing-page.js" defer></script>
+    <script src="../js/produkte.js" defer></script>
+    <script src="../js/bewertungen.js" defer></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Box Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body data-lang="it">
+    <header id="navbar">
+        <a href="#main" class="logo">
+            <img src="../img/logo-leitenschenke-transparent.png" alt="Leitenschenke">
+        </a>
+        <div class="language-settings">
+            <a href="../index.html">DE</a>
+            <a href="#">IT</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#main" class="active">Benvenuti</a></li>
+                <li><a href="#impressions">Su di noi</a></li>
+                <li><a href="#küche">I nostri Piatti</a></li>
+                <li><a href="#produkte">I nostri Prodotti</a></li>
+                <li><a href="#familie">La nostra Famiglia</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger">
+            <div class="bar one"></div>
+            <div class="bar two"></div>
+            <div class="bar three"></div>
+        </div>
+        <div class="hamburger-bg"></div>
+    </header>
+
+    <div class="shortcuts">
+        <div class="shortcut tel"><i class="fa-solid fa-phone"></i><a href="tel:+393338563472" class="tel">+39 333 8563472</a></div>
+        <div class="shortcut location"><i class="fa-solid fa-location-dot"></i><a href="https://www.google.it/maps/place/Gasthaus+Leitenschenke/@46.6341322,11.1358852,17z/data=!3m1!4b1!4m6!3m5!1s0x4782be865296c067:0xb5a8bdf307f6edd4!8m2!3d46.6341285!4d11.1384601!16s%2Fg%2F11btrr3tbx?entry=ttu">Trovaci</a></div>
+        <div class="shortcut öffnungszeiten">
+            <div class="bar">
+                <i class="fa-regular fa-clock"></i>
+                <span>Orari di apertura</span>
+            </div>
+            <div class="details">
+                <li class="saisondauer">da Marzo a Ottobre</li>
+                <div class="spacer">
+                    <ul class="left">
+                        <li>Lunedi:</li>
+                        <li>Martedi:</li>
+                        <li>Mercoledi:</li>
+                        <li>Giovedi:</li>
+                        <li>Venerdi:</li>
+                        <li class="ruhetag">Sabato:</li>
+                        <li>Domenica:</li>
+                        <li class="warme-küche">Cucina calda:</li>
+                    </ul>
+                    <ul class="right">
+                        <li>10:30 - 17:00</li>
+                        <li>10:30 - 17:00</li>
+                        <li>10:30 - 17:00</li>
+                        <li>10:30 - 17:00</li>
+                        <li>10:30 - 17:00</li>
+                        <li class="ruhetag">Chiuso</li>
+                        <li>10:30 - 17:00</li>
+                        <li class="warme-küche">10:30 - 16:00</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="main" id="main">
+        <div class="landing-page">
+            <video autoplay loop muted playsinline id="background-video" preload="auto">
+                <source src="../img/Terasse/MainVidSkyAnimation.mp4" type="video/mp4">
+            </video>
+            <span>Benvenuti alla</span>
+            <img src="../img/leitenschenke-transparent.png" alt="Leitenschenke" class="heading">
+            <a href="#impressions"><i class="fa-solid fa-chevron-down"></i></a>
+            <div class="news">
+                <span>Saremo di nuovo aperti da sabato 16 marzo!</span>
+                <span>Ad aprile e maggio siamo aperti anche il sabato.!</span>
+            </div>
+        </div>
+        <section class="impressions" id="impressions">
+            <div class="text">
+                <h2>Ristorante panoramico Leitenschenke</h2>
+                <p>
+                    Sopra Tscherms, situato direttamente sul sentiero di rogge,
+                    la Leitenschenke offre un panorama unico con vista su Merano e la Valle dell'Adige.
+                    La nostra terrazza è il luogo ideale per rilassarsi e godersi la natura.
+                    Godetevi l'atmosfera mediterranea con palme, ulivi e alberi di limone sorseggiando
+                    un bicchiere di vino o gustando un delizioso pasto.
+                </p>
+                <b>Siamo felici di accogliervi</b>
+                <span>Sonja & Tobias</span>
+            </div>
+            <div class="slider-container">
+                <div class="counter">
+                    <span class="shown">3</span>
+                    <span>/</span>
+                    <span class="total">8</span>
+                </div>
+                <div class="slider">
+                    <div class="slide">
+                        <img src="../img/Terasse/Terasse (4).jpg" alt="Terazza">
+                    </div>
+                    <div class="slide">
+                        <img src="../img/Terasse/Wintergarten (2).jpg" alt="Terazza">
+                    </div>
+                    <div class="slide">
+                        <img src="../img/Terasse/Terasse (3).jpg" alt="Terazza">
+                    </div>
+                    <div class="slide">
+                        <img src="../img/Terasse/Terasse (2).jpg" alt="Terazza">
+                    </div>
+                    <div class="slide">
+                        <img src="../img/Terasse/Terasse (1).jpg" alt="Terazza">
+                    </div>
+                    <div class="slide">
+                        <img src="../img/Terasse/Wintergarten (2).jpg" alt="Terazza">
+                    </div>
+                    <div class="slide">
+                        <img src="../img/Terasse/Terasse (3).jpg" alt="Terazza">
+                    </div>
+                    <!-- Weitere Bilder können hier hinzugefügt werden -->
+                </div>
+                <div class="desktop-arrows">
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+            <div class="mobile-arrows">
+                <div class="dots"> 
+                    <!-- created in js -->
+                </div>
+            </div>       
+        </section>
+    </main>
+
+    <section class="küche" id="küche">
+        <h2>Godere con vista panoramica<a href=""><i class="fa-solid fa-book-open"></i>Menu</a>
+        </h2>
+        <p>
+            Vi viziamo con piatti tradizionali dell'Alto Adige fatti in casa con una vista panoramica unica sulla Valle dell'Adige. <br class="big-br">
+            Quasi tutto è fatto in casa, dalle paste e i canederli allo speck della nostra fattoria, <br class="big-br">
+            fino ai dolci canederli di albicocca, gelati e torte dalla nostra pasticceria. <br class="big-br">
+            Il nostro menu cambia con le stagioni, così c'è sempre qualcosa di nuovo da scoprire. <br class="big-br">
+            Che sia asparagi in primavera, finferli in estate, zucca in autunno o piatti di selvaggina in inverno. <br class="big-br">
+        </p>
+        <div class="slider-container">
+            <div class="counter">
+                <span class="shown">1</span>
+                <span>/</span>
+                <span class="total"></span>
+            </div>
+            <div class="slider">
+                <div class="slide">
+                    <img src="../img/küche/Speckbrettl.jpg" alt="Tagliere di speck">
+                </div>
+                <div class="slide">
+                    <img src="../img/küche/Marillenknödel.jpg" alt="Canederli di albicocca">
+                </div>
+                <div class="slide">
+                    <img src="../img/küche/Spiegelei.jpg" alt="Uovo al tegamino">
+                </div>
+                <div class="slide">
+                    <img src="../img/küche/Hirtenmaccheroni.jpg" alt="Pasta alla pastora">
+                </div>
+                <div class="slide">
+                    <img src="../img/küche/Apfelstrudel.jpg" alt="Strudel di mele">
+                </div>
+                <div class="slide">
+                    <img src="../img/küche/Knödel.jpg" alt="Canederli">
+                </div>
+            </div>
+            <div class="desktop-arrows">
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
+            </div>
+            <!-- <div class="logo">
+                <img src="img/leitenschenke-transparent.png" alt="Leitenschenke">
+            </div> -->
+        </div>
+        <div class="mobile-arrows">
+            <div class="dots"> 
+                <!-- created in js -->
+            </div>
+        </div>
+    </section>
+
+    <section class="produkte" id="produkte">
+        <div class="text">
+            <span>Un pezzo della Leitenschenke</span>
+            <h2>I nostri Prodotti fatti in casa</h2>
+            <p>
+                Da noi troverete una fantastica selezione <br class="small-br"> di prodotti fatti in casa: <br class="big-br"> 
+                Dalle marmellate e i succhi, al miele, <br class="small-br"> speck e salsicce <br class="small-br"> fino all'olio d'oliva e aceto balsamico. <br class="big-br"> 
+                Assaggiate assolutamente <br class="small-br">  il nostro liquore "Crema di Limoncello"! <br class="big-br"> 
+            </p>
+        </div>
+        <div class="limoncello">
+            <div class="image">
+                <img src="../img/Produkte/Limoncello.jpg" alt="Limoncello" class="img2">
+            </div>
+            <div class="right">
+                <span>Liquore:</span>
+                <h2>Crema di Limoncello</h2>
+                <p>
+                    Il nostro Limoncello è fatto coi nostri limoni <br class="small-br"> e arricchito con panna. <br class="big-br"> 
+                    Con i suoi 20% di alcol, è ideale <br class="small-br"> da gustare ghiacciato come liquore.
+                </p>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="meringerhof-produkte">
+            <div class="left">
+                <span>Scaffale dei prodotti</span>
+                <h2>Buono dalla trattoria</h2>
+                <p>
+                    I nostri prodotti provengono dalla nostra trattoria, <br class="small-br"> il Meringerhof a Lagundo. <br class="big-br"> 
+                    Qui coltiviamo e produciamo <br class="small-br"> in modo sostenibile e biologico.
+                </p>
+                <!-- <a href="https://meringerhof.it/">zum Meringerhof</a> -->
+            </div>
+            <div class="img-grid">
+                <div class="img-container">
+                    <img src="../img/Produkte/Marmellade.jpg" alt="Marmellata">
+                </div>
+                <div class="img-container">
+                    <img src="../img/Produkte/Apfelsaft.jpg" alt="Succo di mela">
+                </div>
+                <div class="img-container">
+                    <img src="../img/Produkte/Honig.jpg" alt="Miele">
+                </div>
+                <div class="img-container">
+                    <img src="../img/Produkte/Säfte.jpg" alt="Succhi">
+                </div>
+                <div class="img-container">
+                    <img src="../img/Produkte/Speck.jpg" alt="Speck">
+                </div>
+            </div>
+        </div>
+        <!-- Lightbox für Produkte -->
+        <div id="lightbox" class="lightbox" style="display:none;">
+            <span class="close">&times;</span>
+            <img class="lightbox-content" src="">
+            <div class="caption"></div>
+        </div>
+    </section>
+
+    <section class="familie" id="familie">
+        <span>dalla trattoria al cliente</span>
+        <h2>La nostra famiglia</h2>
+        <div class="leitenschenke">
+            <div class="img">
+                <img src="../img/Familie/Familienfoto.jpg" alt="Foto della famiglia">
+            </div>
+            <div class="text">
+                <h3>Leitenschenke</h3>
+                <p>
+                    La Leitenschenke è un'azienda familiare <br>
+                    che noi, Sonja e Tobias, gestiamo dal 2007. <br>
+                    Qui viviamo anche con nostra figlia Heidi. <br>
+                    A poco a poco, abbiamo creato un piccolo paradiso, <br>
+                    dove viziamo i nostri ospiti con piatti tradizionali <br> altoatesini fatti in casa e prodotti di nostra produzione. <br>
+                </p>
+                <a href="">Scopri di più</a>
+            </div>
+        </div>
+        <div class="hotel-lisetta">
+            <div class="text">
+                <h3>Hotel Lisetta</h3>
+                <p>
+                    L'Hotel Lisetta a Tirolo è gestito dai genitori di Sonja, <br>
+                    lavio e Brigitte, insieme alla sorella Lisa. <br>
+                    Qui potrete trascorrere una vacanza rilassante in piscina, <br> con sauna, massaggi o escursioni.
+                </p>
+                <a href="https://www.hotel-lisetta.it/">vai all Hotel Lisetta</a>
+            </div>
+            <div class="img">
+                <img src="../img/Familie/Lisetta" alt="Hotel Lisetta">
+            </div>
+        </div>
+        <div class="meringerhof">
+            <div class="img">
+                <img src="../img/Familie/Meringerhof.jpg" alt="Meringerhof">
+            </div>
+            <div class="text">
+                <h3>Meringerhof</h3>
+                <p>
+                    Il fratello di Sonja, Markus, sua moglie Siglinde e il loro figlio Lukas <br> sono coloro che gestiscono il Meringerhof con grande passione. <br>
+                </p>
+                <a href="https://meringerhof.it/">vai all Meringerhof</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="bewertungen" id="bewertungen">
+        <div class="top">
+            <span>Recensioni</span>
+            <h2>Cosa dicono i nostri Ospiti</h2>
+            <p>
+                Il nostro team della Leitenschenke si impegna sempre <br class="small-br"> a rendere il vostro soggiorno indimenticabile. <br class="big-br">
+                Per questo siamo molto felici di sapere <br class="small-br"> che avete apprezzato il vostro tempo trascorso da noi. <br class="big-br">
+            </p>
+            <div class="gesamtwertung">
+                <span>4,7 Stelle</span>
+                <a href="https://www.google.com/search?q=leitenschenke&rlz=1C1CHBF_itIT925IT925&oq=leitenschenke&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIQCAEQLhivARjHARiABBiOBTIGCAIQIxgnMgcIAxAAGIAEMgcIBBAAGIAEMgYIBRAAGB4yBggGEAAYHjIGCAcQABgeMggICBAAGAUYHjIICAkQABgFGB7SAQgxOTE3ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8#lrd=0x4782be865296c067:0xb5a8bdf307f6edd4,1,,,,"><i class="fa-brands fa-google"></a></i>
+            </div>
+        </div>
+        <a href="https://g.co/kgs/K29fHEZ" class="bewertung">
+            <h4>Torniamo ogni vacanza</h4>
+            <p><b>"</b>In ogni vacanza che trascorriamo in Alto Adige, fare tappa in questa meravigliosa locanda è un must. Ogni volta siamo entusiasti della bellissima terrazza, della vista, del cibo delizioso e soprattutto degli ospiti così cordiali e gentili. Diciamo di cuore GRAZIE e possiamo solo raccomandare questo locale.<b>"</b></p>
+        </a>
+        <a href="https://g.co/kgs/QcgBGBD" class="bewertung">
+            <h4>Lo si può solo consigliare</h4>
+            <p><b>"</b>Lo si può solo consigliare! Cibo eccellente, personale molto cordiale e attento, ottima atmosfera, vista fantastica, torneremo sicuramente. E un delizioso Limoncello fatto in casa con i nostri limoni 🍋🍋🍋<b>"</b></p>
+        </a>
+        <a href="https://g.co/kgs/r5EVzff" class="bewertung">
+            <h4>I migliori canederli di albicocca</h4>
+            <p><b>"</b> I migliori canederli di albicocca! Da anni, ogni anno, è una tappa obbligatoria per noi solo per i canederli di albicocca, per non parlare degli altri piatti. Poi la fantastica terrazza con così tanto amore piantata e curata, alberi di limone di ogni tipo, alberi di mandarino, fiori, ecc. un sogno....per noi la più bella locanda in Alto Adige....proprietari amabili, molto attenti e gestiti in modo familiare! La vista un sogno! Torniamo con tanto piacere e sempre da voi! Grazie, grazie e grazie! Continuate così! <b>"</b></p>
+        </a>
+        <div class="mehr-bewertungen">
+            <a href="https://g.co/kgs/KchtMGF" class="bewertung">
+                <h4>Una terrazza fantastica</h4>
+                <p><b>"</b>Una terrazza fantastica con una vista super e cibo davvero buono.
+                Bella e ben fatta anche l'area giochi per bambini, c'è qualcosa per tutti!<b>"</b></p>
+            </a>
+            <a href="https://g.co/kgs/K8aQEvY" class="bewertung">
+                <h4>Indescrivibile</h4>
+                <p><b>"</b> La vista, il cibo e la gastronomia sono indescrivibili. Già l'atmosfera mediterranea sulla terrazza con i numerosi alberi di limone è degna di nota. Complimenti a Sonja e Tobias per questo fantastico locale. Veniamo da anni e sempre con piacere. <b>"</b></p>
+            </a>
+            <a href="https://g.co/kgs/r5EVzff" class="bewertung">
+                <h4>Merita un applauso</h4>
+                <p><b>"</b>Che fuori faccia freddo o caldo, la Leitenschenke ha il suo fascino speciale.
+                Da molti anni facciamo tappa durante le nostre escursioni sul Waalweg e siamo sempre i benvenuti come ospiti. Il cibo è sempre fantastico, che si mangi caldo o un dolce. Questo locale è gestito con tanta passione, il che merita il nostro elogio. La Leitenschenke è un must...un piacere completo. Da molti anni sempre "al top", merita il nostro applauso!<b>"</b></p>
+            </a>
+            <a href="https://g.co/kgs/mPYQcr5" class="bewertung">
+                <h4>Il miglior Kaiserschmarrn del mondo</h4>
+                <p><b>"</b>Il miglior Kaiserschmarrn del mondo 😄, posizione e vista da sogno dalla bellissima terrazza con tanti alberi di agrumi e palme. Coppia di proprietari molto motivata e super cordiale, ottima area giochi per famiglie e deliziose prelibatezze prevalentemente di propria produzione, che si adattano anche come souvenir. Una pausa qui è un must sul sentiero Marlinger Waalweg!<b>"</b></p>
+            </a>
+        </div>
+        <div class="mehr-anzeigen">
+            <span class="mehr-anzeigen-text">Mostra di più</span>
+            <i class="fa-solid fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <section class="footer" id="footer">
+            <div class="grid-container">
+                <div class="spacer">
+                    <ul>
+                        <li><b>Contatto:</b></li>
+                        <li>Sentiero Leiten 9</li>
+                        <li>39010 Cermes</li>
+                        <li><i class="fa-solid fa-envelope"></i> <a href="mailto:info@leitenschenke.it" class="mail">info@leitenschenke.it</a></li>
+                        <li><i class="fa-solid fa-phone"></i> <a href="tel:+393338563472" class="tel">+39 333 8563472</a></li>
+                        <a href="impressum.html" class="impressum-link">Impressum</a>
+                    </ul>
+                </div>
+                <div class="spacer">
+                    <ul>
+                        <li><b>Orari di apertura</b></li>
+                        <li class="saisondauer">da Marzo a Ottobre</li>
+                        <div class="wrapper">
+                            <ul class="left">
+                                <li>Ristorante:</li>
+                                <li>Cucina calda:</li>
+                                <li class="ruhetag">Sabato:</li>
+                            </ul>
+                            <ul class="right">
+                                <li>10:30 - 17:00</li>
+                                <li>10:30 - 16:00</li>
+                                <li class="ruhetag">Chiuso</li>
+                            </ul>
+                        </div>
+                    </ul>
+                </div>
+                <div class="spacer">
+                    <ul>
+                        <li><b>Trovaci anche su:</b></li>
+                        <div class="wrapper">
+                            <li><a href="https://www.instagram.com/leitenschenke/?hl=de"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="https://www.google.it/maps/place/Gasthaus+Leitenschenke/@46.6341322,11.1358852,17z/data=!3m1!4b1!4m6!3m5!1s0x4782be865296c067:0xb5a8bdf307f6edd4!8m2!3d46.6341285!4d11.1384601!16s%2Fg%2F11btrr3tbx?entry=ttu"><i class="fa-solid fa-location-dot"></i></a></li>
+                            <li><a href="https://www.google.com/search?q=leitenschenke&rlz=1C1CHBF_itIT925IT925&oq=leitenschenke&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIQCAEQLhivARjHARiABBiOBTIGCAIQIxgnMgcIAxAAGIAEMgcIBBAAGIAEMgYIBRAAGB4yBggGEAAYHjIGCAcQABgeMggICBAAGAUYHjIICAkQABgFGB7SAQgxOTE3ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8#lrd=0x4782be865296c067:0xb5a8bdf307f6edd4,1,,,,"><i class="fa-brands fa-google"></a></i></li>
+                            <li><a href="https://www.tripadvisor.de/Restaurant_Review-g1419955-d5037164-Reviews-Restaurant_Leitenschenke-Cermes_Province_of_South_Tyrol_Trentino_Alto_Adige.html"><i class='bx bxl-trip-advisor'></i></a></li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+    </section>
+</body>
+</html>

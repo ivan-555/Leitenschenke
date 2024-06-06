@@ -1,0 +1,437 @@
+main .landing-page{
+    /* Background Gradient ist set trough JS after Video is loaded */
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Vollbildhöhe */
+    overflow: hidden; /* Versteckt überstehende Teile des Videos */
+    padding: 20vh 0 0 0; /* spaces the heading from the top */
+}
+
+#background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 104%; /* to give enough high for it to float */
+    z-index: -1; /* Stellt das Video hinter den Inhalt */
+    animation: float 15s infinite;
+}
+
+
+@keyframes float {
+    0% {
+        transform: translate(-50%, -50%);
+    }
+    50% {
+        transform: translate(-50%, -51.8%);
+    }
+    100% {
+        transform: translate(-50%, -50%);
+    }
+}
+
+
+main .landing-page span{
+    color: rgb(239, 239, 239);
+    font-size: 1.2rem;
+    text-align: center;
+    display: block;
+    margin-bottom: 20px;
+}
+
+main .landing-page img.heading{
+    width: 700px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+main .landing-page i {
+    color: white;
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    font-size: 1.5rem;
+    background-color: var(--transparent-color);
+    padding: 10px;
+    border-radius: 50%;
+}
+
+
+
+
+
+
+    	/* NEWS  */
+main .landing-page .news{
+    position: absolute;
+    top: 50%;
+    transform: translateY(120px);
+    background: var(--accent-color-dark);
+    padding: 10px;
+    border-radius: 10px 0 0 10px;
+    right: 0;
+    max-width: 90vw;
+    display: none;
+}
+
+main .landing-page .news span{
+    margin: 10px;
+    text-align: left;
+}
+
+
+
+
+
+
+
+/* Page Load Animations */
+main .landing-page span {
+    opacity: 0;
+    animation: fadeIn calc(var(--animation-dur) + 0.2s) forwards;
+    animation-delay: 0.2s;
+}
+
+main .landing-page img.heading {
+    opacity: 0;
+    animation: fadeIn calc(var(--animation-dur) + 0.2s) forwards;
+    animation-delay: 0.2s;
+}
+
+
+main .landing-page i {
+    opacity: 0;
+    animation: wiggleContinuous 4s infinite 2s, fadeIn calc(var(--animation-dur) + 0.2s) forwards 1s;
+}
+/* Hover effect */
+main .landing-page i:hover {
+    animation: wiggle 0.5s, fadeIn calc(var(--animation-dur) + 0.2s) forwards 1s;
+}
+/* Onclick animation */
+main .landing-page i.animated {
+    animation: swipe 1s ease-out;
+}
+
+
+
+
+
+
+
+
+
+
+/* Impressions Section */
+main .impressions{
+    padding-top: var(--section-padding-top);
+    scroll-margin-top: var(--header-height);
+    min-height: calc(100vh - var(--header-height));
+    display: flex; /* Mach .impressions zu einem Flex Container */
+    flex-direction: column; /* Kinder werden vertikal gestapelt */
+    justify-content: space-between; /* drückt den slider container nach unten */
+    background: var(bg-color);
+    padding-bottom: var(--section-padding-top);
+}
+
+main .impressions .text{
+    margin: auto;
+}
+
+main .impressions h2{
+    margin-bottom: var(--title-mb);
+    text-align: center;
+    padding: 0 20px;
+}
+
+main .impressions p{
+    margin: auto;
+    width: 60%;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+main .impressions b{
+    display: block;
+    text-align: center;
+    color: var(--accent-color-alt);
+    font-size: 1.2rem;
+    margin-top: 30px;
+    font-weight: 600;
+}
+
+main .impressions span{
+    text-align: center;
+    display: block;
+    font-size: 1.2rem;
+}
+
+main .impressions .slider-container {
+    position: relative;
+    width: 90vw; /* Breite des Sliders */
+    height: 500px;
+    margin: 80px auto 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+main .impressions .slider-container .counter{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 0 0 0 10px;
+    z-index: 20;
+}
+
+main .impressions .slider-container .slider {
+    display: flex;
+    gap: 1vw;
+    height: 100%;
+    transition: transform 0.5s;
+    width: fit-content;
+
+    cursor: grab;
+
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+main .impressions .slider-container .slider.grabbing{
+    cursor: grabbing;
+}
+
+main .impressions .slider-container .slide{
+    height: 100%;
+    width: 29.33vw;
+
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+main .impressions .slider-container .slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+main .impressions .slider-container .desktop-arrows .prev,
+main .impressions .slider-container .desktop-arrows .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    cursor: pointer;
+    background-color: var(--accent-color-dark);
+    color: white;
+    border: none;
+    padding: 10px;
+    z-index: 10;
+}
+
+main .impressions .slider-container .desktop-arrows .prev {
+    left: 0px;
+    border-radius: 0 10px 10px 0;
+    transition: opacity 1s ease;
+}
+
+main .impressions .slider-container .desktop-arrows .next {
+    right: 0px;
+    border-radius: 10px 0 0 10px;
+    transition: opacity 1s ease;
+}
+
+
+
+
+    /* mobile arrows */
+main .impressions .mobile-arrows{
+    display: none;
+}
+
+
+main .impressions .mobile-arrows{
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+main .impressions .mobile-arrows i{
+    font-size: 1rem;
+    padding: 10px;
+    /* background: rgb(215, 215, 215); */
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 1s;
+}
+
+main .impressions .mobile-arrows .dots{
+    display: flex;
+    gap: 15px;
+}
+
+main .impressions .mobile-arrows .dots .dot{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(171, 169, 169);
+    cursor: pointer;
+}
+
+main .impressions .mobile-arrows .dots .dot.active{
+    background-color: var(--accent-color-alt);
+}
+
+
+
+/* Landing Page Querys */
+@media screen and (max-width: 2550px){
+    /* #background-video {
+        animation: none;
+    } */
+}
+@media screen and (max-width: 1600px){
+    main .landing-page .news span{
+        font-size: 1.1rem;
+    }
+}
+@media screen and (max-width: 1000px){
+    main .landing-page .news span{
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width: 700px){
+    main .landing-page .news span{
+        font-size: 0.9rem;
+    }
+}
+@media screen and (max-width: 500px){
+    main .landing-page .news span{
+        font-size: 0.8rem;
+    }
+}
+@media screen and (max-width: 430px){
+    main .landing-page .news span{
+        font-size: 0.7rem;
+    }
+}
+@media screen and (max-width: 380px){
+    main .landing-page .news span{
+        font-size: 0.6rem;
+    }
+}
+@media screen and (max-width: 330px){
+    main .landing-page .news span{
+        font-size: 0.5rem;
+    }
+}
+
+
+@media screen and (max-width: 600px){
+    main .landing-page img.heading{
+        width: 100%;
+    }
+    main .landing-page span{
+        font-size: 1.1rem;
+    }
+}
+
+
+
+
+
+
+/* Impressions Section Querys */
+
+    /* Slider adjustment */
+@media screen and (max-width: 1400px){
+    main .impressions .slider-container .slide{
+        width: 44.5vw;
+    }
+}
+@media screen and (max-width: 1000px){
+    main .impressions .slider-container .slide{
+        width: 90vw;
+    }
+    main .impressions .slider-container .slider{
+        gap: 0;
+    }
+    main .impressions .mobile-arrows{
+        display: flex;
+    }
+    main .impressions .slider-container .desktop-arrows{
+        display: none;
+    }
+}
+
+
+    /* Fsize adjustment */
+@media screen and (max-width: 1500px) {
+    main .impressions .text p{
+        width: 70%;
+    }
+}
+@media screen and (max-width: 1200px){
+    main .impressions .text p{
+        width: 90%;
+    }
+}
+@media screen and (max-width: 800px){
+    main .impressions .text h2{
+        font-size: 2rem;
+    }
+    main .impressions .text p{
+        font-size: 1.2rem;
+    }
+}
+@media screen and (max-width: 700px){
+    main .impressions .text h2{
+        font-size: 1.8rem;
+        margin-bottom: 50px;
+    }
+}
+@media screen and (max-width: 600px){
+    main .impressions .text h2{
+        font-size: 1.6rem;
+    }
+    main .impressions .text p{
+        font-size: 1rem;
+    }
+    main .impressions .text b,
+    main .impressions .text span{
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
+    /* Height Querys */
+@media (max-height: 900px){
+    main .landing-page i {
+        bottom: 50px;
+    }
+    #background-video {
+        top: 40%;  /* to make more of the terasse visible */
+        min-height: 100%;
+        animation: unset; /* delete animation on mobile to avoid underflow */
+    }
+}

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://leitenschenke.it/sitemap.xml

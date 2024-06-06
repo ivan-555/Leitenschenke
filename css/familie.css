@@ -1,0 +1,128 @@
+.familie {
+    scroll-margin-top: calc(var(--header-height) - 1px);
+    padding-top: var(--section-padding-top);
+    padding-bottom: var(--section-padding-top);
+    position: relative;
+}
+
+.familie h2{
+    text-align: center;
+    font-size: 2.7rem;
+    margin-bottom: calc(var(--section-padding-top) + 20px) ;
+}
+
+.familie span{
+    color: var(--accent-color-alt);
+    font-size: 1.4rem;
+    text-align: center;
+    display: block;
+}
+
+.familie .leitenschenke,
+.familie .hotel-lisetta,
+.familie .meringerhof{
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+    padding: 0px 20px;
+}
+
+.familie .img,
+.familie .text{
+    width: 50%;
+}
+
+.familie .img img{
+    width: 100%;
+}
+
+.familie .text h3{
+    font-size: 2rem;
+    margin-top: 30px;
+    font-weight: 400;
+}
+
+.familie .text p{
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+.familie .leitenschenke .text a,
+.familie .hotel-lisetta .text a,
+.familie .meringerhof .text a{
+    font-size: 1.2rem;
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.3s;
+    display: inline-block;
+    margin-top: 50px;
+}
+
+.familie .leitenschenke .text a:hover,
+.familie .hotel-lisetta .text a:hover,
+.familie .meringerhof .text a:hover{
+    transform: scale(0.96);
+}
+
+
+
+
+
+
+
+@media (max-width: 1450px) {
+    .familie .leitenschenke,
+    .familie .hotel-lisetta,
+    .familie .meringerhof{
+        flex-direction: column;
+        width: 100%;
+        gap: 0px;
+        margin: auto;
+        margin-top: 50px;
+    }
+
+    .familie .leitenschenke{
+        margin-top: 0;
+    }
+    
+    .familie .img,
+    .familie .text{
+        width: 100%;
+        margin: auto;
+        text-align: center;
+        background: rgb(238, 238, 238);
+    }
+
+    .familie .text{
+        padding-bottom: 50px;
+        border-radius: 0 0 30px 30px;
+    }
+
+    .familie .hotel-lisetta .text{
+        order: 2;
+    }
+}
+
+
+@media (max-width: 720px){
+    .familie br{
+        display: none;
+    }
+    .familie .text{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 550px){
+    .familie h2{
+        font-size: 2.3rem;
+    }
+    .familie span{
+        font-size: 1.2rem;
+    }
+}

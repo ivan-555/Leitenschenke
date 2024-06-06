@@ -1,0 +1,234 @@
+.küche{
+    scroll-margin-top: calc(var(--header-height) - 1px);
+    padding-top: var(--section-padding-top);
+    padding-bottom: 100px;
+    background: rgb(41, 41, 41);
+    color: white;
+}
+
+.küche h2{
+    text-align: center;
+    margin-bottom: var(--title-mb);
+    color: var(--accent-color);
+    position: relative;
+}
+
+.küche h2 a{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5vw;
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.küche p{
+    text-align: center;
+    width: 70%;
+    margin: auto;
+    font-size: 1.2rem;
+    margin-bottom: 100px;
+    line-height: 1.4;
+    color: rgb(243, 243, 243);
+}
+
+
+.küche .slider-container{
+    width: 95%;
+    margin: auto;
+    height: 85vh;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.küche .slider-container .slider{
+    display: flex;
+    width: fit-content;
+    height: 100%;
+    transition: transform 1s ease;
+
+    scroll-snap-type: x mandatory;
+    scroll-padding: 0 1vw; /* optional */
+    -webkit-overflow-scrolling: touch;
+}
+
+.küche .slider-container .slider .slide{
+    width: 95vw;
+    height: 100%;
+
+    scroll-snap-align: start; /* oder center, je nach Präferenz */
+}
+
+.küche .slider-container .slider .slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.küche .slider-container .slider .slide:nth-child(5) img{
+    object-position: bottom;
+}
+
+.küche .mobile-arrows{
+    display: none;
+}
+
+.küche .slider-container .desktop-arrows .prev,
+.küche .slider-container .desktop-arrows .next{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.475);
+    color: white;
+    border: none;
+    outline: none;
+    padding: 20px;
+}
+
+
+.küche .slider-container .desktop-arrows .prev{
+    left: 0;
+    border-radius: 0 10px 10px 0;
+    transition: opacity 1s ease;
+}
+
+.küche .slider-container .desktop-arrows .next{
+    right: 0;
+    border-radius: 10px 0 0 10px;
+    transition: opacity 1s ease;
+}
+
+
+.küche .slider-container .counter{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    top: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 0 0 0 10px;
+    z-index: 20;
+}
+
+.küche .slider-container .logo{
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+    width: 300px;
+    height:100px;
+}
+
+.küche .slider-container .logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+/* mobile arrows */
+.küche .mobile-arrows{
+    display: none;
+}
+
+
+.küche .mobile-arrows{
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.küche .mobile-arrows i{
+    font-size: 1rem;
+    padding: 10px;
+    /* background: rgb(215, 215, 215); */
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.küche .mobile-arrows .dots{
+    display: flex;
+    gap: 15px;
+}
+
+.küche .mobile-arrows .dots .dot{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgb(171, 169, 169);
+    cursor: pointer;
+}
+
+.küche .mobile-arrows .dots .dot.active{
+    background-color: var(--accent-color-alt);
+}
+
+
+@media screen and (max-width: 1800px){
+    .küche p{
+        width: 80%;
+    }
+}
+@media screen and (max-width: 1550px){
+    .küche p{
+        width: 90%;
+    }
+}
+@media screen and (max-width: 1400px){
+    .küche p{
+        width: 80%;
+    }
+    .küche p .big-br{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .küche .mobile-arrows{
+        display: flex;
+    }
+    .küche .slider-container .desktop-arrows{
+        display: none;
+    }
+    .küche p{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .küche h2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    
+    .küche h2 a{
+        position: static;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .küche h2{
+        font-size: 2.2rem;
+        padding: 0 10px;
+    }
+
+    .küche p{
+        font-size: 1.1rem;
+    }
+}

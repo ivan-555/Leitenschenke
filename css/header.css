@@ -1,0 +1,484 @@
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: all 1s;
+    z-index: 1000;
+    background: transparent;
+    height: var(--header-height);
+    padding: 0 20px 0 40px;
+}
+
+header.scrolled{
+    background: var(--accent-color-dark);
+}
+
+header.scrolled .logo{
+    opacity: 1;
+    transition-delay: 0.5s;
+}
+
+header.scrolled nav ul{
+    transform: translateX(15%);
+}
+
+header .logo{
+    width: 350px;
+    height: 90%;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.5s;
+    position: absolute;
+    left: 40px;
+}
+
+header .logo img{
+    width: 100%;
+    height: 100%;
+}
+
+header nav ul{
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    transform: translateX(0%);
+    transition: all 1s;
+}
+
+header nav ul li a{
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.5s;
+    text-shadow: 1px 1px 80px black;
+}
+
+header nav ul li a:hover{
+    color: var(--accent-color-dark);
+}
+header nav ul li a.active{
+    color: var(--accent-color-dark);
+}
+
+header.scrolled nav ul li a:hover{
+    color: var(--accent-color);
+}
+header.scrolled nav ul li a.active{
+    color: var(--accent-color);
+}
+
+header .language-settings{
+    font-size: .7rem;
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    right: 20px;
+}
+
+header .language-settings a{
+    border: 1px solid white;
+    padding: 6px;
+    border-radius: 5px;
+    letter-spacing: 3px;
+    transition: all 0.5s;
+}
+
+header .language-settings a:hover{
+    color: var(--accent-color-dark);
+    border: 1px solid var(--accent-color-dark);
+}
+
+header.scrolled .language-settings a:hover{
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+}
+
+
+body[data-lang="de"] header .language-settings a:nth-child(1){
+    border: 1px solid black;
+    color: black;
+}
+
+body[data-lang="de"] header.scrolled .language-settings a:nth-child(1){
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+}
+
+body[data-lang="it"] header .language-settings a:nth-child(2){
+    border: 1px solid black;
+    color: black;
+}
+
+body[data-lang="it"] header.scrolled .language-settings a:nth-child(2){
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+}
+
+.hamburger{
+    display: none;
+}
+
+
+
+
+
+
+
+/* Animations on page load */
+header nav ul li a{
+    opacity: 0;
+    animation: fadeInFromTop var(--animation-dur) forwards;
+}
+
+header nav ul li:nth-child(1) a {
+    animation-delay: 0.1s;
+}
+header nav ul li:nth-child(2) a {
+    animation-delay: 0.2s;
+}
+header nav ul li:nth-child(3) a {
+    animation-delay: 0.3s;
+}
+header nav ul li:nth-child(4) a {
+    animation-delay: 0.4s;
+}
+header nav ul li:nth-child(5) a {
+    animation-delay: 0.5s;
+}
+
+header .language-settings a{
+    opacity: 0;
+    animation: fadeInFromTop var(--animation-dur) forwards;
+}
+
+header .language-settings a:nth-child(1){
+    animation-delay: 0.6s;
+}
+header .language-settings a:nth-child(2){
+    animation-delay: 0.7s;
+}
+
+
+
+
+
+
+
+
+
+/* width querys */
+
+    /* deletes the logo for space gains */
+@media (max-width: 1800px) {
+    header .logo{
+        display: none;
+    }
+    header.scrolled nav ul{
+        transform: translateX(0%);
+    }
+}
+
+
+    /* first size of hamburger sidebar nav */
+@media (max-width: 1450px) {
+    header{
+        position: fixed;
+        top: 0;
+        height: 100%;
+        width: 600px;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        flex-direction: column;
+        padding: 50px 0 100px 0;
+        background: var(--transparent-color);
+        transform: translateX(-100%);
+        transition: transform 0.7s, background 1s;
+    }
+
+    header .hamburger-bg{
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translateX(100%);
+        width: 80px;
+        height: 60px;
+        background: var(--transparent-color);
+        border-radius:  0 0 40% 0;
+        transition: opacity 0.2s, background 1s;
+    }
+
+    header.scrolled{
+        background: var(--accent-color-dark) !important;
+    }
+    header.scrolled .hamburger-bg{
+        background: var(--accent-color-dark) !important;
+    }
+
+    header nav{
+        width: 100%;
+        flex-grow: 1;
+    }
+
+    header nav ul{
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+        height: 100%;
+    }
+
+    header nav ul li{
+        width: 100%;
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+
+    header nav ul li a{
+        width: 100%;
+        padding: 30px;
+    }
+
+    header .logo{
+        display: block;
+        width: 70%;
+        margin: auto;
+        position: static;
+        height: 100px;
+        margin-bottom: 100px;
+        opacity: 1;
+    }
+
+    header .language-settings{
+        font-size: .9rem;
+        display: flex;
+        gap: 15px;
+        position: static;
+        margin-bottom: 150px;
+    }
+
+    body[data-lang="de"] header .language-settings a:nth-child(1){
+        border: 1px solid var(--accent-color);
+        color: var(--accent-color);
+    }
+    
+    
+    body[data-lang="it"] header .language-settings a:nth-child(2){
+        border: 1px solid var(--accent-color);
+        color: var(--accent-color);
+    }
+
+    header nav ul li a:hover{
+        color: var(--accent-color);
+    }
+    header nav ul li a.active{
+        color: var(--accent-color);
+    }
+
+
+        /* hamburger styling */
+    .hamburger{
+        cursor: pointer;
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: -60px;
+        height: 40px;
+        width: 50px;
+        transition: transform 0.7s;
+        z-index: 200;
+    }
+
+    .hamburger .bar{
+        position: absolute;
+        height: 3px;
+        width: 30px;
+        border-radius: 5px;
+        background: white;
+    }
+
+    .hamburger .bar.one{
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .hamburger .bar.two{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .hamburger .bar.three{
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    @keyframes bar1toX {
+      50%{
+        transform: rotate(0deg);
+      }
+      100%{
+        transform: rotate(-45deg);
+        top: 19px;
+      }
+    }
+
+    @keyframes bar2toX {
+        50%{
+          opacity: 1;
+        }
+        80%{
+          opacity: 0;
+        }
+        100%{
+            opacity: 0;
+        }
+    }
+
+    @keyframes bar3toX {
+        50%{
+          transform: rotate(0deg);
+        }
+        100%{
+          transform: rotate(45deg);
+          bottom: 18px;
+        }
+    }
+
+    @keyframes bar1toHamburger {
+        50%{
+            transform: rotate(0deg);
+          }
+        0%{
+            transform: rotate(-45deg);
+            top: 19px;
+        }
+    }
+
+    @keyframes bar2toHamburger {
+        50%{
+            opacity: 1;
+          }
+        0%{
+            opacity: 0;
+        }
+    }
+
+    @keyframes bar3toHamburger {
+        50%{
+            transform: rotate(0deg);
+          }
+        0%{
+            transform: rotate(45deg);
+            bottom: 18px;
+        }
+    }
+
+    @keyframes shiftLeft {
+        0%{
+            transform: translateX(0%);
+        }
+        100%{
+            transform: translateX(-80px);
+        }
+    }
+
+    @keyframes shiftRight {
+        0%{
+            transform: translateX(-80px);
+        }
+        100%{
+            transform: translateX(0%);
+        }
+    }
+    
+    .hamburger.toX .bar.one{
+        animation: bar1toX  .5s forwards;
+    }
+    .hamburger.toX .bar.two{
+        animation: bar2toX  .5s forwards;
+    }
+    .hamburger.toX .bar.three{
+        animation: bar3toX  .5s forwards;
+    }
+
+    .hamburger.toHamburger .bar.one{
+        animation: bar1toHamburger  .5s forwards;
+    }
+    .hamburger.toHamburger .bar.two{
+        animation: bar2toHamburger  .5s forwards;
+    }
+    .hamburger.toHamburger .bar.three{
+        animation: bar3toHamburger  .5s forwards;
+    }
+
+    .hamburger.shiftLeft{
+        animation: shiftLeft 0.6s forwards 0.1s;
+    }
+    .hamburger.shiftRight{
+        animation: shiftRight 0.7s forwards;
+    }
+}
+
+@media (max-width: 700px){
+    header{
+        width: 100%;
+    }
+    header .logo{
+        width: 60%;
+    }
+}
+
+@media (max-width: 550px){
+    header .logo{
+        width: 80%;
+    }
+}
+
+
+
+
+
+
+/* height querys */
+@media (max-height: 1350px) and (max-width: 1450px){
+    header{
+        justify-content: space-between;
+        padding: 50px 0 100px 0;
+    }
+
+    header nav ul{
+        justify-content: space-between;
+        gap: 0px;
+    }
+}
+
+@media (max-height: 1050px) and (max-width: 1450px) {
+    header .logo{
+        margin-bottom: 50px;
+    }
+
+    header .language-settings{
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-height: 850px) and (max-width: 1450px){
+    header nav ul li a{
+        width: 100%;
+        padding: 20px;
+    }
+    header .logo{
+        margin-bottom: 40px;
+    }
+
+    header .language-settings{
+        margin-bottom: 40px;
+    }
+}
