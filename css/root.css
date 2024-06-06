@@ -50,23 +50,23 @@ p{
     font-weight: 300;
 }
 
+
+
+/* Scrollbar Styling */
 /* Breite und Farbe der Scrollleiste */
 ::-webkit-scrollbar {
     width: 10px; /* Breite der Scrollleiste */
     width: 0px;
 }
-
 /* Stil der Scrollleisten-Spur */
 ::-webkit-scrollbar-track {
     background: #f1f1f1; /* Hintergrundfarbe der Scrollleisten-Spur */
 }
-
 /* Stil des Scrollleisten-Thumb */
 ::-webkit-scrollbar-thumb {
     background: #888; /* Hintergrundfarbe des Scrollleisten-Thumbs */
     border-radius: 1px; /* abgerundete Ecken des Scrollleisten-Thumbs */
 }
-
 /* Optionales: Ändern des Hover-Effekts des Scrollleisten-Thumbs */
 ::-webkit-scrollbar-thumb:hover {
     background: #555; /* Hintergrundfarbe des Scrollleisten-Thumbs beim Hovern */
@@ -76,8 +76,7 @@ p{
 
 /* deletes scroll-margin-top: var(--header-height); cause there is no header */
 @media (max-width: 1450px){
-    section,
-    main .impressions{
+    section{
         scroll-margin-top: -1px !important;
     }
 }
@@ -85,9 +84,7 @@ p{
 
 
 
-
-/* Animations */
-
+/* Load Animations */
 @keyframes fadeInFromTop {
     from {
         opacity: 0;
@@ -118,62 +115,5 @@ p{
     }
     to {
         opacity: 1;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-/* Landing Page Arrow Animations */
-@keyframes wiggle {
-    0% {
-        transform: translate(-50%, 0%) rotate(0deg);
-    }
-    30% {
-        transform: translate(-50%, -10%) rotate(-5deg);
-    }
-    50% {
-        transform: translate(-50%, 10%) rotate(5deg);
-    }
-    80% {
-        transform: translate(-50%, -5%) rotate(-3deg);
-    }
-    100% {
-        transform: translate(-50%, 0%) rotate(0deg);
-    }
-}
-@keyframes swipe{
-    0%{
-        transform: translate(-50%, 0%);
-    }
-    50%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 0;
-        transform: translate(-50%, 300%);
-    }
-}
-@keyframes wiggleContinuous {
-    0%, 5% {
-        transform: translate(-50%, 0%) rotate(0deg);
-    }
-    2.5%, 4.5% {
-        transform: translate(-50%, -10%) rotate(-5deg);
-    }
-    3.5% {
-        transform: translate(-50%, 10%) rotate(5deg);
-    }
-    5.5% {
-        transform: translate(-50%, -5%) rotate(-3deg);
-    }
-    100% {
-        transform: translate(-50%, 0%) rotate(0deg);
     }
 }

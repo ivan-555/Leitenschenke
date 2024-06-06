@@ -1,0 +1,242 @@
+.überUns{
+    padding-top: var(--section-padding-top);
+    scroll-margin-top: var(--header-height);
+    min-height: calc(100vh - var(--header-height));
+    display: flex; /* Mach .impressions zu einem Flex Container */
+    flex-direction: column; /* Kinder werden vertikal gestapelt */
+    justify-content: space-between; /* drückt den slider container nach unten */
+    background: var(bg-color);
+    padding-bottom: var(--section-padding-top);
+}
+
+.überUns .text{
+    margin: auto;
+}
+
+.überUns h2{
+    margin-bottom: var(--title-mb);
+    text-align: center;
+    padding: 0 20px;
+}
+
+.überUns p{
+    margin: auto;
+    width: 60%;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.überUns b{
+    display: block;
+    text-align: center;
+    color: var(--accent-color-alt);
+    font-size: 1.2rem;
+    margin-top: 30px;
+    font-weight: 600;
+}
+
+.überUns span{
+    text-align: center;
+    display: block;
+    font-size: 1.2rem;
+}
+
+.überUns .slider-container {
+    position: relative;
+    width: 90vw; /* Breite des Sliders */
+    height: 500px;
+    margin: 80px auto 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.überUns .slider-container .counter{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 0 0 0 10px;
+    z-index: 20;
+}
+
+.überUns .slider-container .slider {
+    display: flex;
+    gap: 1vw;
+    height: 100%;
+    transition: transform 0.5s;
+    width: fit-content;
+
+    cursor: grab;
+
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.überUns .slider-container .slider.grabbing{
+    cursor: grabbing;
+}
+
+.überUns .slider-container .slide{
+    height: 100%;
+    width: 29.33vw;
+
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.überUns .slider-container .slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.überUns .slider-container .desktop-arrows .prev,
+.überUns .slider-container .desktop-arrows .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    cursor: pointer;
+    background-color: var(--accent-color-dark);
+    color: white;
+    border: none;
+    padding: 10px;
+    z-index: 10;
+}
+
+.überUns .slider-container .desktop-arrows .prev {
+    left: 0px;
+    border-radius: 0 10px 10px 0;
+    transition: opacity 1s ease;
+}
+
+.überUns .slider-container .desktop-arrows .next {
+    right: 0px;
+    border-radius: 10px 0 0 10px;
+    transition: opacity 1s ease;
+}
+
+
+
+
+    /* mobile arrows */
+.überUns .mobile-arrows{
+    display: none;
+}
+
+
+.überUns .mobile-arrows{
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.überUns .mobile-arrows i{
+    font-size: 1rem;
+    padding: 10px;
+    /* background: rgb(215, 215, 215); */
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.überUns .mobile-arrows .dots{
+    display: flex;
+    gap: 15px;
+}
+
+.überUns .mobile-arrows .dots .dot{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(171, 169, 169);
+    cursor: pointer;
+}
+
+.überUns .mobile-arrows .dots .dot.active{
+    background-color: var(--accent-color-alt);
+}
+
+
+
+
+
+
+
+
+
+    /* Slider adjustment */
+@media screen and (max-width: 1400px){
+    main .impressions .slider-container .slide{
+        width: 44.5vw;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    main .impressions .slider-container .slide{
+        width: 90vw;
+    }
+    main .impressions .slider-container .slider{
+        gap: 0;
+    }
+    main .impressions .mobile-arrows{
+        display: flex;
+    }
+    main .impressions .slider-container .desktop-arrows{
+        display: none;
+    }
+}
+
+
+    /* Fsize adjustment */
+@media screen and (max-width: 1500px) {
+    main .impressions .text p{
+        width: 70%;
+    }
+}
+@media screen and (max-width: 1200px){
+    main .impressions .text p{
+        width: 90%;
+    }
+}
+@media screen and (max-width: 800px){
+    main .impressions .text h2{
+        font-size: 2rem;
+    }
+    main .impressions .text p{
+        font-size: 1.2rem;
+    }
+}
+@media screen and (max-width: 700px){
+    main .impressions .text h2{
+        font-size: 1.8rem;
+        margin-bottom: 50px;
+    }
+}
+@media screen and (max-width: 600px){
+    main .impressions .text h2{
+        font-size: 1.6rem;
+    }
+    main .impressions .text p{
+        font-size: 1rem;
+    }
+    main .impressions .text b,
+    main .impressions .text span{
+        font-size: 1rem;
+    }
+}

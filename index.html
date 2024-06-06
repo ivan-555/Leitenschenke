@@ -93,16 +93,18 @@
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/shortcuts.css">
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/küche.css">
-    <link rel="stylesheet" href="../css/produkte.css">
-    <link rel="stylesheet" href="../css/familie.css">
+    <link rel="stylesheet" href="../css/überUns.css">
+    <link rel="stylesheet" href="../css/unsereGerichte.css">
+    <link rel="stylesheet" href="../css/unsereProdukte.css">
+    <link rel="stylesheet" href="../css/unsereFamilie.css">
     <link rel="stylesheet" href="../css/bewertungen.css">
     <link rel="stylesheet" href="../css/footer.css">
     <!-- Custom JS -->
     <script src="js/header.js" defer></script>
-    <script src="js/küche.js" defer></script>
-    <script src="js/landing-page.js" defer></script>
-    <script src="js/produkte.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/überUns.js" defer></script>
+    <script src="js/unsereGerichte.js" defer></script>
+    <script src="js/unsereProdukte.js" defer></script>
     <script src="js/bewertungen.js" defer></script>
     <!-- Poppins Font Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -125,10 +127,10 @@
         <nav>
             <ul>
                 <li><a href="#main" class="active">Willkommen</a></li>
-                <li><a href="#impressions">Über uns</a></li>
-                <li><a href="#küche">Unsere Gerichte</a></li>
-                <li><a href="#produkte">Unsere Produkte</a></li>
-                <li><a href="#familie">Unsere Familie</a></li>
+                <li><a href="#überUns">Über uns</a></li>
+                <li><a href="#unsereGerichte">Unsere Gerichte</a></li>
+                <li><a href="#unsereProdukte">Unsere Produkte</a></li>
+                <li><a href="#unsereFamilie">Unsere Familie</a></li>
             </ul>
         </nav>
         <div class="hamburger">
@@ -136,7 +138,7 @@
             <div class="bar two"></div>
             <div class="bar three"></div>
         </div>
-        <div class="hamburger-bg"></div>
+        <div class="hamburger-bg"></div> 
     </header>
 
     <div class="shortcuts">
@@ -182,70 +184,71 @@
             </video>
             <span>Willkommen bei der</span>
             <img src="../img/leitenschenke-transparent.png" alt="Leitenschenke" class="heading">
-            <a href="#impressions"><i class="fa-solid fa-chevron-down"></i></a>
+            <a href="#überUns"><i class="fa-solid fa-chevron-down"></i></a>
             <div class="news">
                 <span>Wir haben ab Samstag 16. März wieder geöffnet!</span>
                 <span>Im April und Mai haben wir auch Samstags geöffnet!</span>
             </div>
         </div>
-        <section class="impressions" id="impressions">
-            <div class="text">
-                <h2>Panoramarestaurant Leitenschenke</h2>
-                <p>
-                    Oberhalb von Tscherms, direkt am Marlinger Waalweg gelegen
-                    bietet die Leitenschenke ein einzigartiges Panorama mit
-                    Blick auf Meran und das Etschtal.
-                    Unsere Terasse ist der ideale Ort um sich zu entspannen und die Natur zu genießen.
-                    Genießen Sie das mediterane Ambiente mit Palmen, Olivenbäumen
-                    und Zitronenbäumen bei einem Glas Wein oder einem leckeren Essen.
-                </p>
-                <b>Wir freuen uns auf Euch</b>
-                <span>Sonja & Tobias</span>
-            </div>
-            <div class="slider-container">
-                <div class="counter">
-                    <span class="shown">3</span>
-                    <span>/</span>
-                    <span class="total">8</span>
-                </div>
-                <div class="slider">
-                    <div class="slide">
-                        <img src="../img/Terasse/Terasse (4).jpg" alt="Terasse">
-                    </div>
-                    <div class="slide">
-                        <img src="../img/Terasse/Wintergarten (2).jpg" alt="Terasse">
-                    </div>
-                    <div class="slide">
-                        <img src="../img/Terasse/Terasse (3).jpg" alt="Terasse">
-                    </div>
-                    <div class="slide">
-                        <img src="../img/Terasse/Terasse (2).jpg" alt="Terasse">
-                    </div>
-                    <div class="slide">
-                        <img src="../img/Terasse/Terasse (1).jpg" alt="Terasse">
-                    </div>
-                    <div class="slide">
-                        <img src="../img/Terasse/Wintergarten (2).jpg" alt="Terasse">
-                    </div>
-                    <div class="slide">
-                        <img src="../img/Terasse/Terasse (3).jpg" alt="Terasse">
-                    </div>
-                    <!-- Weitere Bilder können hier hinzugefügt werden -->
-                </div>
-                <div class="desktop-arrows">
-                    <button class="prev">&#10094;</button>
-                    <button class="next">&#10095;</button>
-                </div>
-            </div>
-            <div class="mobile-arrows">
-                <div class="dots"> 
-                    <!-- created in js -->
-                </div>
-            </div>       
-        </section>
     </main>
 
-    <section class="küche" id="küche">
+    <section class="überUns" id="überUns">
+        <div class="text">
+            <h2>Panoramarestaurant Leitenschenke</h2>
+            <p>
+                Oberhalb von Tscherms, direkt am Marlinger Waalweg gelegen
+                bietet die Leitenschenke ein einzigartiges Panorama mit
+                Blick auf Meran und das Etschtal.
+                Unsere Terasse ist der ideale Ort um sich zu entspannen und die Natur zu genießen.
+                Genießen Sie das mediterane Ambiente mit Palmen, Olivenbäumen
+                und Zitronenbäumen bei einem Glas Wein oder einem leckeren Essen.
+            </p>
+            <b>Wir freuen uns auf Euch</b>
+            <span>Sonja & Tobias</span>
+        </div>
+        <div class="slider-container">
+            <div class="counter">
+                <span class="shown">3</span>
+                <span>/</span>
+                <span class="total">8</span>
+            </div>
+            <div class="slider">
+                <div class="slide">
+                    <img src="../img/Terasse/Terasse (4).jpg" alt="Terasse">
+                </div>
+                <div class="slide">
+                    <img src="../img/Terasse/Wintergarten (2).jpg" alt="Terasse">
+                </div>
+                <div class="slide">
+                    <img src="../img/Terasse/Terasse (3).jpg" alt="Terasse">
+                </div>
+                <div class="slide">
+                    <img src="../img/Terasse/Terasse (2).jpg" alt="Terasse">
+                </div>
+                <div class="slide">
+                    <img src="../img/Terasse/Terasse (1).jpg" alt="Terasse">
+                </div>
+                <div class="slide">
+                    <img src="../img/Terasse/Wintergarten (2).jpg" alt="Terasse">
+                </div>
+                <div class="slide">
+                    <img src="../img/Terasse/Terasse (3).jpg" alt="Terasse">
+                </div>
+                <!-- Weitere Bilder können hier hinzugefügt werden -->
+            </div>
+            <div class="desktop-arrows">
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
+            </div>
+        </div>
+        <div class="mobile-arrows">
+            <div class="dots"> 
+                <!-- created in js -->
+            </div>
+        </div>       
+    </section>
+
+    <section class="unsereGerichte" id="unsereGerichte">
         <h2>Genießen mit Weitblick<a href=""><i class="fa-solid fa-book-open"></i>Menü</a>
         </h2>
         <p>
@@ -263,13 +266,13 @@
             </div>
             <div class="slider">
                 <div class="slide">
+                    <img src="img/küche/Spiegelei.jpg" alt="Spiegelei">
+                </div>
+                <div class="slide">
                     <img src="img/küche/Speckbrettl.jpg" alt="Speckbrettl">
                 </div>
                 <div class="slide">
                     <img src="img/küche/Marillenknödel.jpg" alt="Marillenknödel">
-                </div>
-                <div class="slide">
-                    <img src="img/küche/Spiegelei.jpg" alt="Spiegelei">
                 </div>
                 <div class="slide">
                     <img src="img/küche/Hirtenmaccheroni.jpg" alt="Hirtenmaccheroni">
@@ -280,14 +283,12 @@
                 <div class="slide">
                     <img src="img/küche/Knödel.jpg" alt="Knödel">
                 </div>
+                <!-- Weitere Bilder können hier hinzugefügt werden -->
             </div>
             <div class="desktop-arrows">
                 <button class="prev">&#10094;</button>
                 <button class="next">&#10095;</button>
             </div>
-            <!-- <div class="logo">
-                <img src="img/leitenschenke-transparent.png" alt="Leitenschenke">
-            </div> -->
         </div>
         <div class="mobile-arrows">
             <div class="dots"> 
@@ -296,7 +297,7 @@
         </div>
     </section>
 
-    <section class="produkte" id="produkte">
+    <section class="unsereProdukte" id="unsereProdukte">
         <div class="text">
             <span>Ein Stück Leitenschenke</span>
             <h2>Unsere hausgemachten Produkte</h2>
@@ -328,7 +329,7 @@
                     Unsere Produkte kommen vom eigenen Hof, <br class="small-br"> dem Meringerhof in Algund. <br class="big-br"> 
                     Hier wird nachhaltig und biologisch <br class="small-br"> angebaut und produziert.
                 </p>
-                <!-- <a href="https://meringerhof.it/">zum Meringerhof</a> -->
+                <a href="https://meringerhof.it/">zum Meringerhof</a>
             </div>
             <div class="img-grid">
                 <div class="img-container">
@@ -356,7 +357,7 @@
         </div>
     </section>
 
-    <section class="familie" id="familie">
+    <section class="unsereFamilie" id="unsereFamilie">
         <span>vom Hof bis zum Gast</span>
         <h2>Unsere Familie</h2>
         <div class="leitenschenke">

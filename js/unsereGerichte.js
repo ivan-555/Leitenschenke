@@ -1,6 +1,6 @@
 // Küche Galerie Slider
 function setupKuecheSlider() {
-    const section = document.querySelector('#küche');
+    const section = document.querySelector('#unsereGerichte');
     const slider = section.querySelector('.slider');
     const prevButtons = section.querySelectorAll('.desktop-arrows .prev, .mobile-arrows .prev');
     const nextButtons = section.querySelectorAll('.desktop-arrows .next, .mobile-arrows .next');
