@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-// Arrow Down Animation
+// Arrow Down Swipe Animation add and remove to fix bug
 const arrowDown = document.querySelector('main .fa-chevron-down');
 
 arrowDown.addEventListener('click', () => {

@@ -1,6 +1,6 @@
 .shortcuts{
     position: fixed;
-    right: -300px;
+    right: -350px; /* changed to -300px by animation forwards */
     top: 50%;
     transform: translateY(-50%);
     display: flex;
@@ -17,7 +17,7 @@
     justify-content: center;
     border-radius: 20px 0 0 20px;
     background: var(--accent-color-dark);
-    transition: all 1s;
+    transition: all 1s ease;
 }
 
 
@@ -100,8 +100,21 @@
 
 
 /* Animations on page load */
-.shortcuts .shortcut{
-    animation: slideIn var(--animation-dur);
+@keyframes slideInFromRight{
+    0%{
+        opacity: 0;
+        right: -350px;
+    }
+    100%{
+        opacity: 1;
+        right: -300px;
+    }
+}
+
+.shortcuts{
+    opacity: 0;
+    animation: slideInFromRight var(--load-duration) forwards;
+    animation-delay: 1s;
 }
 
 

@@ -16,7 +16,7 @@
     --section-padding-top: 70px;
     --bg-color: rgb(255, 250, 244);
     --title-mb: 35px;
-    --animation-dur: 0.8s;
+    --load-duration: 1s;
 }
 
 body{
@@ -78,42 +78,5 @@ p{
 @media (max-width: 1450px){
     section{
         scroll-margin-top: -1px !important;
-    }
-}
-
-
-
-
-/* Load Animations */
-@keyframes fadeInFromTop {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0px);
-    }
-}
-
-
-@keyframes slideIn{
-    0%{
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    100%{
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
     }
 }

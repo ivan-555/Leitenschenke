@@ -62,11 +62,11 @@ main .landing-page i {
 
 main .landing-page i {
     opacity: 0;
-    animation: wiggleContinuous 4s infinite 2s, fadeIn calc(var(--animation-dur) + 0.2s) forwards 1s; /* fadeIn is defined in root.css and is a page load animation */
+    animation: wiggleContinuous 4s infinite 2.5s, fadeIn calc(var(--load-duration) + 1s) forwards 1.5s; /* fadeIn is defined at  on page load animations underneath */
 }
 /* Hover effect */
 main .landing-page i:hover {
-    animation: wiggle 0.5s, fadeIn calc(var(--animation-dur) + 0.2s) forwards 1s;
+    animation: wiggle 0.5s, fadeIn calc(var(--load-duration) + 1s) forwards 1.5s;
 }
 /* Onclick animation */
 main .landing-page i.animated {
@@ -112,21 +112,22 @@ main .landing-page i.animated {
 
     /* wiggles continuous */
 @keyframes wiggleContinuous {
-    0%, 5% {
+    0% {
         transform: translate(-50%, 0%) rotate(0deg);
     }
-    2.5%, 4.5% {
+    2.5% {
         transform: translate(-50%, -10%) rotate(-5deg);
     }
-    3.5% {
+    5% {
         transform: translate(-50%, 10%) rotate(5deg);
     }
-    5.5% {
+    7.5% {
         transform: translate(-50%, -5%) rotate(-3deg);
     }
-    100% {
+    10% {
         transform: translate(-50%, 0%) rotate(0deg);
     }
+    /* sets pause inbetween every animation loop */
 }
 
 
@@ -159,16 +160,25 @@ main .landing-page .news span{
 
 
 /* Page Load Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 main .landing-page span {
     opacity: 0;
-    animation: fadeIn calc(var(--animation-dur) + 0.2s) forwards;
-    animation-delay: 0.2s;
+    animation: fadeIn calc(var(--load-duration) + 1s) forwards; /* add 1s to the root load duration */
+    animation-delay: 0.2s; /* delays the animation after page loads */
 }
 
 main .landing-page img.heading {
     opacity: 0;
-    animation: fadeIn calc(var(--animation-dur) + 0.2s) forwards;
-    animation-delay: 0.2s;
+    animation: fadeIn calc(var(--load-duration) + 1s) forwards; /* add 1s to the root load duration */
+    animation-delay: 0.2s; /* delays the animation after page loads */
 }
 
 /* Arrow Down Page Load Animation is set above */
@@ -179,6 +189,8 @@ main .landing-page img.heading {
 
 
 
+/* Media Queries */
+/* font adjusts */
 @media screen and (max-width: 1600px){
     main .landing-page .news span{
         font-size: 1.1rem;

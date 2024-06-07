@@ -103,6 +103,42 @@
 
 
 
+
+
+
+/* scroll Animations */
+.bewertungen .top{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 2s ease;
+}
+.bewertungen .top.visible{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.bewertungen .bewertung{
+    opacity: 0 !important;
+    transition: all 1s ease;
+}
+.bewertungen .bewertung.visible{
+    opacity: 1 !important;
+}
+
+.bewertungen .mehr-anzeigen{
+    opacity: 0;
+    transition: all 1s ease;
+}
+.bewertungen .mehr-anzeigen.visible{
+    opacity: 1;
+}
+
+
+
+
+
+
+
 @media (max-width: 1700px){
     .bewertungen .top{
         text-align: center;

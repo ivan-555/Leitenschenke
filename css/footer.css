@@ -78,6 +78,24 @@
 }
 
 
+
+
+/* scroll Animations */
+.footer .grid-container{
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease;
+}
+.footer .grid-container.visible{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+
+
 @media (max-width: 1400px){
     .footer .grid-container{
         grid-template-columns: repeat(1, 400px);

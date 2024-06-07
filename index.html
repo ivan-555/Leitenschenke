@@ -100,6 +100,7 @@
     <link rel="stylesheet" href="../css/bewertungen.css">
     <link rel="stylesheet" href="../css/footer.css">
     <!-- Custom JS -->
+    <script src="js/root.js" defer></script>
     <script src="js/header.js" defer></script>
     <script src="js/main.js" defer></script>
     <script src="js/überUns.js" defer></script>
@@ -193,7 +194,7 @@
     </main>
 
     <section class="überUns" id="überUns">
-        <div class="text">
+        <div class="text scrollAnimated">
             <h2>Panoramarestaurant Leitenschenke</h2>
             <p>
                 Oberhalb von Tscherms, direkt am Marlinger Waalweg gelegen
@@ -206,7 +207,7 @@
             <b>Wir freuen uns auf Euch</b>
             <span>Sonja & Tobias</span>
         </div>
-        <div class="slider-container">
+        <div class="slider-container scrollAnimated">
             <div class="counter">
                 <span class="shown">3</span>
                 <span>/</span>
@@ -249,16 +250,17 @@
     </section>
 
     <section class="unsereGerichte" id="unsereGerichte">
-        <h2>Genießen mit Weitblick<a href=""><i class="fa-solid fa-book-open"></i>Menü</a>
-        </h2>
-        <p>
-            Wir verwöhnen Sie mit traditionellen Südtiroler Köstlichkeiten bei einem einzigartigen Panoramablick über das Etschtal. <br class="big-br">
-            Bei uns wird fast alles hausgemacht, von Nudeln und Knödeln über Speck vom eigenen Hof <br class="big-br">
-            bis hin zu süßen Marillenknödeln, Eis und Kuchen aus unserer Backstube. <br class="big-br">
-            Unsere Speisekarte wechselt mit den Jahreszeiten, sodass es immer etwas Neues zu entdecken gibt. <br class="big-br">
-            Ob Spargel im Frühling, Pfifferlinge im Sommer, Kürbis im Herbst oder Wildgerichte im Winter. <br class="big-br">
-        </p>
-        <div class="slider-container">
+        <div class="text scrollAnimated">
+            <h2>Genießen mit Weitblick<a href=""><i class="fa-solid fa-book-open"></i>Menü</a></h2>
+            <p>
+                Wir verwöhnen Sie mit traditionellen Südtiroler Köstlichkeiten bei einem einzigartigen Panoramablick über das Etschtal. <br class="big-br">
+                Bei uns wird fast alles hausgemacht, von Nudeln und Knödeln über Speck vom eigenen Hof <br class="big-br">
+                bis hin zu süßen Marillenknödeln, Eis und Kuchen aus unserer Backstube. <br class="big-br">
+                Unsere Speisekarte wechselt mit den Jahreszeiten, sodass es immer etwas Neues zu entdecken gibt. <br class="big-br">
+                Ob Spargel im Frühling, Pfifferlinge im Sommer, Kürbis im Herbst oder Wildgerichte im Winter. <br class="big-br">
+            </p>
+        </div>
+        <div class="slider-container scrollAnimated">
             <div class="counter">
                 <span class="shown">1</span>
                 <span>/</span>
@@ -298,7 +300,7 @@
     </section>
 
     <section class="unsereProdukte" id="unsereProdukte">
-        <div class="text">
+        <div class="text scrollAnimated">
             <span>Ein Stück Leitenschenke</span>
             <h2>Unsere hausgemachten Produkte</h2>
             <p>
@@ -307,7 +309,7 @@
                 Probieren Sie unbedingt, <br class="small-br"> unseren „Crema di Limoncello“ Likör! <br class="big-br"> 
             </p>
         </div>
-        <div class="limoncello">
+        <div class="limoncello scrollAnimated">
             <div class="image">
                 <img src="../img/Produkte/Limoncello.jpg" alt="Limoncello" class="img2">
             </div>
@@ -320,8 +322,8 @@
                 </p>
             </div>
         </div>
-        <div class="line"></div>
-        <div class="meringerhof-produkte">
+        <div class="line scrollAnimated"></div>
+        <div class="meringerhof-produkte scrollAnimated">
             <div class="left">
                 <span>Produktregal</span>
                 <h2>Gutes vom Bauernhof</h2>
@@ -358,9 +360,9 @@
     </section>
 
     <section class="unsereFamilie" id="unsereFamilie">
-        <span>vom Hof bis zum Gast</span>
-        <h2>Unsere Familie</h2>
-        <div class="leitenschenke">
+        <span class="scrollAnimated">vom Hof bis zum Gast</span>
+        <h2 class="scrollAnimated">Unsere Familie</h2>
+        <div class="leitenschenke scrollAnimated">
             <div class="img">
                 <img src="../img/Familie/Familienfoto.jpg" alt="Familienfoto">
             </div>
@@ -376,7 +378,7 @@
                 <a href="">mehr über Uns</a>
             </div>
         </div>
-        <div class="hotel-lisetta">
+        <div class="hotel-lisetta scrollAnimated">
             <div class="text">
                 <h3>Hotel Lisetta</h3>
                 <p>
@@ -390,7 +392,7 @@
                 <img src="../img/Familie/Lisetta" alt="Hotel Lisetta">
             </div>
         </div>
-        <div class="meringerhof">
+        <div class="meringerhof scrollAnimated">
             <div class="img">
                 <img src="../img/Familie/Meringerhof.jpg" alt="Meringerhof">
             </div>
@@ -405,7 +407,7 @@
     </section>
 
     <section class="bewertungen" id="bewertungen">
-        <div class="top">
+        <div class="top scrollAnimated">
             <span>Bewertungen</span>
             <h2>Das sagen unsere Gäste</h2>
             <p>
@@ -417,46 +419,46 @@
                 <a href="https://www.google.com/search?q=leitenschenke&rlz=1C1CHBF_itIT925IT925&oq=leitenschenke&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIQCAEQLhivARjHARiABBiOBTIGCAIQIxgnMgcIAxAAGIAEMgcIBBAAGIAEMgYIBRAAGB4yBggGEAAYHjIGCAcQABgeMggICBAAGAUYHjIICAkQABgFGB7SAQgxOTE3ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8#lrd=0x4782be865296c067:0xb5a8bdf307f6edd4,1,,,,"><i class="fa-brands fa-google"></a></i>
             </div>
         </div>
-        <a href="https://g.co/kgs/K29fHEZ" class="bewertung">
+        <a href="https://g.co/kgs/K29fHEZ" class="bewertung scrollAnimated">
             <h4>Wir kehren jeden Urlaub ein</h4>
             <p><b>"</b>In jedem Urlaub, den wir in Südtirol verbringen, ist das Einkehren in diesem wundervollen Gasthaus ein Muss. Jedes Mal sind wir von der wunderschönen Terrasse, dem Ausblick, dem köstlichen Essen und vor allem den so herzlichen und netten Gastgebern begeistert. Wir sagen von Herzen DANKE und können diese Gaststätte nur weiter empfehlen<b>"</b></p>
         </a>
-        <a href="https://g.co/kgs/QcgBGBD" class="bewertung">
+        <a href="https://g.co/kgs/QcgBGBD" class="bewertung scrollAnimated">
             <h4>Kann man nur empfehlen</h4>
             <p><b>"</b>Kann man nur empfehlen! Super Essen, sehr freundliches und aufmerksames personal, tolles Ambiente, Mega Ausblick, kommen sicher wieder. Und einen ganz leckeren Hausgemachten Lemoncello aus eigenen Zitronen gemacht 🍋🍋🍋<b>"</b></p>
         </a>
-        <a href="https://g.co/kgs/r5EVzff" class="bewertung">
+        <a href="https://g.co/kgs/r5EVzff" class="bewertung scrollAnimated">
             <h4>Die besten Marillenknödel</h4>
             <p><b>"</b> Die besten Marillenknödel! Seit Jahren und jedes Jahr ist es eine Pflichteinkehr zu diesem Ort für uns schon allein wegen den Marillenknödel, ganz zu schweigen von den anderen Gerichten. Dann die tolle Terrasse mit so viel Liebe gepflanzt und gepflegt, Zitronenbäumchen aller Art, Mandarinenbäumchen, Blumen, etc. ein Traum....für uns die schönste Schenke in Südtirol....liebenswerte Besitzer, sehr aufmerksam und familiär geführt! Die Aussicht ein Traum! Wir kommen sooo gerne und immer wieder zu Ihnen! Danke, danke und danke! Macht weiter so! <b>"</b></p>
         </a>
         <div class="mehr-bewertungen">
-            <a href="https://g.co/kgs/KchtMGF" class="bewertung">
+            <a href="https://g.co/kgs/KchtMGF" class="bewertung scrollAnimated">
                 <h4>Eine Hammer Terasse</h4>
                 <p><b>"</b>Eine Hammer Terrasse mit super Ausblick und richtig gutem Essen.
                     Schön und gut gemacht ist auch die Kinder-Spielecke, da ist für jeden was dabei!<b>"</b></p>
             </a>
-            <a href="https://g.co/kgs/K8aQEvY" class="bewertung">
+            <a href="https://g.co/kgs/K8aQEvY" class="bewertung scrollAnimated">
                 <h4>Unbeschreiblich</h4>
                 <p><b>"</b> Die Aussicht, das Essen und die Gastronomie ist unbeschreiblich. Schon das mediterrane Flair auf der Terrasse mit den vielen Zitronenbäumen ist sehenswert. Mein Glückwunsch an Sonja und Tobias für diese tolle Lokalität. Wir kommen schon seit Jahren und immer wieder gerne. <b>"</b></p>
             </a>
-            <a href="https://g.co/kgs/r5EVzff" class="bewertung">
+            <a href="https://g.co/kgs/r5EVzff" class="bewertung scrollAnimated">
                 <h4>Das verdient Applaus</h4>
                 <p><b>"</b>Obs draussen kalt ist oder warm, die Leitenschenke hat ihren tollen Charme.
                     Seit vielen Jahren machen wir auf unseren Waalwegwanderungen Rast und sind stets willkommen als Gast. Das Essen ist immer phantastisch, ob man Warm isst oder einen Nachtisch. Hier wird mit viel Herzblut eine Gaststätte geführt, was unser Lob gebührt.Die Leitenschenke ist ein Muss...rundum ein Genuss. Über viele Jahre wirklich immer "obenaus", für das verdient sie unseren Applaus!<b>"</b></p>
             </a>
-            <a href="https://g.co/kgs/mPYQcr5" class="bewertung">
+            <a href="https://g.co/kgs/mPYQcr5" class="bewertung scrollAnimated">
                 <h4>Weltbester Kaiserschmarrn</h4>
                 <p><b>"</b>Weltbester Kaiserschmarrn 😄, Traumlage und -blick von der wunderschönen Terrasse mit vielen Zitrusbäumen und Palmen. Hochmotiviertes und super freundliches Besitzerehepaar, tolle Familien-Spielecke und feine Leckereien überwiegend aus eigener Produktion, die sich auch toll als Mitbringsel eignen. Eine Pause hier ist ein  Muss auf dem Marlinger Waalweg!<b>"</b></p>
             </a>
         </div>
-        <div class="mehr-anzeigen">
+        <div class="mehr-anzeigen scrollAnimated">
             <span class="mehr-anzeigen-text">Mehr anzeigen</span>
             <i class="fa-solid fa-chevron-down"></i>
         </div>
     </section>
 
     <section class="footer" id="footer">
-            <div class="grid-container">
+            <div class="grid-container scrollAnimated">
                 <div class="spacer">
                     <ul>
                         <li><b>Kontakt:</b></li>

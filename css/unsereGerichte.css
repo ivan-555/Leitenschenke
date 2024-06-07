@@ -178,6 +178,35 @@
 }
 
 
+
+/* scroll animations */
+.unsereGerichte .text{
+    opacity: 0;
+    transition: all 2s ease;
+    transform: translateX(50px);
+}
+
+.unsereGerichte .text.visible{
+   opacity: 1;
+   transform: translateX(0);
+}
+
+.unsereGerichte .slider-container{
+    opacity: 0;
+    transition: all 2s ease;
+    transform: translateY(50px);
+}
+
+.unsereGerichte .slider-container.visible{
+   opacity: 1;
+   transform: translateY(0);
+}
+
+
+
+
+
+
 @media screen and (max-width: 1800px){
     .unsereGerichte p{
         width: 80%;

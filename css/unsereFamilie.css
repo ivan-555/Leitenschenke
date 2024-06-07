@@ -72,8 +72,55 @@
 
 
 
+/* scroll Animations */
+.unsereFamilie span,
+.unsereFamilie h2{
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: all 2s;
+}
+.unsereFamilie span.visible,
+.unsereFamilie h2.visible{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.unsereFamilie .leitenschenke{
+    opacity: 0;
+    transform: translateX(20px);
+    transition: all 1.5s;
+}
+.unsereFamilie .leitenschenke.visible{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.unsereFamilie .hotel-lisetta{
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 1.5s;
+}
+.unsereFamilie .hotel-lisetta.visible{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.unsereFamilie .meringerhof{
+    opacity: 0;
+    transform: translateX(20px);
+    transition: all 1.5s;
+}
+.unsereFamilie .meringerhof.visible{
+    opacity: 1;
+    transform: translateX(0);
+}
 
 
+
+
+
+
+/* cards in column layout */
 @media (max-width: 1450px) {
     .unsereFamilie .leitenschenke,
     .unsereFamilie .hotel-lisetta,

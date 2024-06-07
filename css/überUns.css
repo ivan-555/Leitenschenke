@@ -176,6 +176,30 @@
 
 
 
+/* scroll animations */
+.überUns .text{
+    opacity: 0;
+    transition: all 2s ease;
+    transform: translateX(50px);
+}
+
+.überUns .text.visible{
+   opacity: 1;
+   transform: translateX(0);
+}
+
+.überUns .slider-container{
+    opacity: 0;
+    transition: all 2s ease;
+    transform: translateX(100px);
+}
+
+.überUns .slider-container.visible{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
 
 
 
