@@ -1,11 +1,9 @@
 .überUns{
     padding-top: var(--section-padding-top);
     scroll-margin-top: var(--header-height);
-    min-height: calc(100vh - var(--header-height));
-    display: flex; /* Mach .impressions zu einem Flex Container */
-    flex-direction: column; /* Kinder werden vertikal gestapelt */
+    display: flex;
+    flex-direction: column;
     justify-content: space-between; /* drückt den slider container nach unten */
-    background: var(bg-color);
     padding-bottom: var(--section-padding-top);
 }
 
@@ -206,22 +204,22 @@
 
     /* Slider adjustment */
 @media screen and (max-width: 1400px){
-    main .impressions .slider-container .slide{
+    .überUns .slider-container .slide{
         width: 44.5vw;
     }
 }
 
 @media screen and (max-width: 1000px){
-    main .impressions .slider-container .slide{
+    .überUns .slider-container .slide{
         width: 90vw;
     }
-    main .impressions .slider-container .slider{
+    .überUns .slider-container .slider{
         gap: 0;
     }
-    main .impressions .mobile-arrows{
+    .überUns .mobile-arrows{
         display: flex;
     }
-    main .impressions .slider-container .desktop-arrows{
+    .überUns .slider-container .desktop-arrows{
         display: none;
     }
 }
@@ -229,38 +227,38 @@
 
     /* Fsize adjustment */
 @media screen and (max-width: 1500px) {
-    main .impressions .text p{
+    .überUns .text p{
         width: 70%;
     }
 }
 @media screen and (max-width: 1200px){
-    main .impressions .text p{
+    .überUns .text p{
         width: 90%;
     }
 }
 @media screen and (max-width: 800px){
-    main .impressions .text h2{
+    .überUns .text h2{
         font-size: 2rem;
     }
-    main .impressions .text p{
+    .überUns .text p{
         font-size: 1.2rem;
     }
 }
 @media screen and (max-width: 700px){
-    main .impressions .text h2{
+    .überUns .text h2{
         font-size: 1.8rem;
         margin-bottom: 50px;
     }
 }
 @media screen and (max-width: 600px){
-    main .impressions .text h2{
+    .überUns .text h2{
         font-size: 1.6rem;
     }
-    main .impressions .text p{
+    .überUns .text p{
         font-size: 1rem;
     }
-    main .impressions .text b,
-    main .impressions .text span{
+    .überUns .text b,
+    .überUns .text span{
         font-size: 1rem;
     }
 }

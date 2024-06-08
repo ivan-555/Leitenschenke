@@ -1,7 +1,7 @@
 .unsereProdukte{
-    padding-top: var(--section-padding-top);
     scroll-margin-top: var(--header-height);
-    padding-bottom: 100px;
+    padding-top: var(--section-padding-top);
+    padding-bottom: var(--section-padding-top);
     position: relative;
 }
 
@@ -10,7 +10,7 @@
     width: 100%;
     text-align: center;
     margin: auto;
-    margin-bottom: 100px;
+    margin-bottom: var(--section-padding-top);
 }
 
 .unsereProdukte .text span{
@@ -53,7 +53,6 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
-    border-radius: 5px;
 }
 
 .unsereProdukte .limoncello .right{
@@ -65,6 +64,7 @@
     text-align: center;
     padding: 0 30px;
     margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .unsereProdukte .limoncello .right span{
@@ -73,7 +73,7 @@
 }
 
 .unsereProdukte .limoncello .right h2{
-    margin-bottom: 20px;
+    margin-bottom: var(--title-mb);
 }
 
 .unsereProdukte .limoncello .right p{
@@ -81,7 +81,47 @@
     padding: 0 10px;
 }
 
-.unsereProdukte .limoncello .right a{
+
+
+.unsereProdukte .line{
+    width: 70%;
+    height: 1px;
+    background-color: var(--accent-color-alt);
+    margin: auto;
+}
+
+
+.unsereProdukte .meringerhof-produkte{
+    display: flex;
+    flex-direction: column;
+}
+
+.unsereProdukte .meringerhof-produkte .left{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.unsereProdukte .meringerhof-produkte .left span{
+    color: var(--accent-color-alt);
+    font-size: 1.3rem;
+}
+
+.unsereProdukte .meringerhof-produkte .left h2{
+    margin-bottom: var(--title-mb);
+}
+
+.unsereProdukte .meringerhof-produkte .left p{
+    font-size: 1.2rem;
+    padding: 0 10px;
+}
+
+.unsereProdukte .meringerhof-produkte .left a{
     font-size: 1.2rem;
     text-decoration: none;
     border: 1px solid black;
@@ -93,16 +133,8 @@
     width: fit-content;
 }
 
-.unsereProdukte .limoncello .right a:hover{
+.unsereProdukte .meringerhof-produkte .left a:hover{
     transform: scale(0.96);
-}
-
-
-
-
-.unsereProdukte .meringerhof-produkte{
-    display: flex;
-    flex-direction: column;
 }
 
 .unsereProdukte .meringerhof-produkte .img-grid{
@@ -114,7 +146,6 @@
     grid-template-rows: 400px 250px;
     gap: 5px;
     margin: auto;
-    margin-top: 50px;
 }
 
 .unsereProdukte .meringerhof-produkte .img-grid .img-container img{
@@ -147,52 +178,9 @@
     grid-row: 2 / 3;
 }
 
-.unsereProdukte .meringerhof-produkte .left{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.unsereProdukte .meringerhof-produkte .left span{
-    color: var(--accent-color-alt);
-    font-size: 1.3rem;
-}
-
-.unsereProdukte .meringerhof-produkte .left h2{
-    margin-bottom: 20px;
-}
-
-.unsereProdukte .meringerhof-produkte .left p{
-    font-size: 1.2rem;
-    padding: 0 10px;
-}
-
-.unsereProdukte .meringerhof-produkte .left a{
-    font-size: 1.2rem;
-    text-decoration: none;
-    border: 1px solid black;
-    padding: 10px;
-    border-radius: 5px;
-    transition: all 0.3s;
-    display: inline-block;
-    margin-top: 50px;
-    width: fit-content;
-}
-
-.unsereProdukte .meringerhof-produkte .left a:hover{
-    transform: scale(0.96);
-}
 
 
-.unsereProdukte .line{
-    width: 70%;
-    height: 1px;
-    background-color: var(--accent-color-alt);
-    margin: 80px auto;
-}
+
 
 .unsereProdukte .limoncello .right .small-br,
 .unsereProdukte .meringerhof-produkte .left .small-br{
@@ -203,7 +191,6 @@
 
 
 /* Meringerhof Lightbox */
-
 .lightbox {
     position: fixed;
     top: 0;
