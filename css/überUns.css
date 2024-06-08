@@ -1,14 +1,12 @@
 .überUns{
     padding-top: var(--section-padding-top);
     scroll-margin-top: var(--header-height);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* drückt den slider container nach unten */
     padding-bottom: var(--section-padding-top);
 }
 
 .überUns .text{
     margin: auto;
+    margin-bottom: var(--section-padding-top);
 }
 
 .überUns h2{
@@ -41,15 +39,20 @@
 
 .überUns .slider-container {
     position: relative;
-    width: 90vw; /* Breite des Sliders */
+    width: 90vw;
     height: 500px;
-    margin: 80px auto 0 auto;
+    margin: auto;
     overflow: hidden;
     border-radius: 10px;
 }
 
 .überUns .slider-container .counter{
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
     top: 0;
     right: 0;
     background-color: rgba(0,0,0,0.5);
@@ -63,16 +66,9 @@
     display: flex;
     gap: 1vw;
     height: 100%;
-    transition: transform 0.5s;
     width: fit-content;
-
+    transition: transform 1s ease;
     cursor: grab;
-
-    -webkit-user-drag: none;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
 }
 
 .überUns .slider-container .slider.grabbing{
@@ -80,8 +76,8 @@
 }
 
 .überUns .slider-container .slide{
-    height: 100%;
     width: 29.33vw;
+    height: 100%;
 
     -webkit-user-drag: none;
     user-select: none;
@@ -130,37 +126,17 @@
 
 
 
-
-    /* mobile arrows */
-.überUns .mobile-arrows{
-    display: none;
-}
-
-
-.überUns .mobile-arrows{
-    gap: 50px;
+.überUns .dots{
+    display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 50px;
-}
-
-.überUns .mobile-arrows i{
-    font-size: 1rem;
-    padding: 10px;
-    /* background: rgb(215, 215, 215); */
-    border-radius: 50%;
-    cursor: pointer;
-    transition: 1s;
-}
-
-.überUns .mobile-arrows .dots{
-    display: flex;
     gap: 15px;
 }
 
 .überUns .mobile-arrows .dots .dot{
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
     background-color: rgb(171, 169, 169);
     cursor: pointer;
@@ -216,11 +192,12 @@
     .überUns .slider-container .slider{
         gap: 0;
     }
-    .überUns .mobile-arrows{
-        display: flex;
-    }
+    /* hide arrows since prob touch device */
     .überUns .slider-container .desktop-arrows{
         display: none;
+    }
+    .überUns .slider-container {
+        border-radius: 0px;
     }
 }
 

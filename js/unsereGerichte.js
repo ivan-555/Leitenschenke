@@ -1,6 +1,6 @@
 // Küche Galerie Slider
-function setupKuecheSlider() {
-    const section = document.querySelector('#unsereGerichte');
+function setupKuecheSlider(sectionSelector) {
+    const section = document.querySelector(sectionSelector);
     const slider = section.querySelector('.slider');
     const prevButtons = section.querySelectorAll('.desktop-arrows .prev, .mobile-arrows .prev');
     const nextButtons = section.querySelectorAll('.desktop-arrows .next, .mobile-arrows .next');
@@ -8,7 +8,7 @@ function setupKuecheSlider() {
     const totalCounter = section.querySelector('.counter .total');
     const dotsContainer = section.querySelector('.dots');
     let currentIndex = 0;
-    const slideWidth = 95; // Fixed slide width in vw
+    const slideWidth = 90; // Fixed slide width in vw
     const gapWidth = 0; // No gap width
     const visibleSlides = 1; // Always showing one slide at a time
 
@@ -37,6 +37,22 @@ function setupKuecheSlider() {
         updateDots();
     }
 
+    function createDots() {
+        dotsContainer.innerHTML = ''; // Clear existing dots
+        if (window.innerWidth <= 1000) {
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.createElement('div');
+                dot.classList.add('dot');
+                if (i === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => {
+                    currentIndex = i;
+                    moveSlide(0);
+                });
+                dotsContainer.appendChild(dot);
+            }
+        }
+    }
+
     function updateDots() {
         const dots = dotsContainer.querySelectorAll('.dot');
         dots.forEach((dot, index) => {
@@ -44,18 +60,8 @@ function setupKuecheSlider() {
         });
     }
 
-    function createDots() {
-        dotsContainer.innerHTML = ''; // Clear existing dots
-        for (let i = 0; i < totalSlides; i++) {
-            const dot = document.createElement('div');
-            dot.classList.add('dot');
-            if (i === 0) dot.classList.add('active');
-            dot.addEventListener('click', () => {
-                currentIndex = i;
-                moveSlide(0);
-            });
-            dotsContainer.appendChild(dot);
-        }
+    function removeDots() {
+        dotsContainer.innerHTML = '';
     }
 
     prevButtons.forEach(button => button.addEventListener('click', () => moveSlide(-1)));
@@ -63,8 +69,13 @@ function setupKuecheSlider() {
 
     createDots();
     updateButtonVisibility();
+
+    window.addEventListener('resize', () => {
+        createDots(); // Recreate dots on resize if the window size changes
+        updateDots(); // Update dots to reflect the current state
+    });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    setupKuecheSlider();
+    setupKuecheSlider('.unsereGerichte');
 });

@@ -20,29 +20,31 @@ function setupSlider(sectionSelector) {
     function updateSlideParameters() {
         if (window.innerWidth <= 1000) {
             slideWidth = window.innerWidth * 0.90; // 90vw when only 1 slide is visible
-            gapWidth = 0;
+            gapWidth = 0; // No gap when only 1 slide is visible
             visibleSlides = 1;
-            createDots();
+            createDots(); // Create dots when only 1 slide is visible
         } else if (window.innerWidth <= 1400) {
             slideWidth = window.innerWidth * 0.445; // 44.5vw when 2 slides are visible
             gapWidth = window.innerWidth * 0.01; // 1vw gap
             visibleSlides = 2;
-            removeDots();
+            removeDots();   // Remove dots when 2 slides are visible
         } else {
             slideWidth = window.innerWidth * 0.2933; // 29.33vw when 3 slides are visible
             gapWidth = window.innerWidth * 0.01; // 1vw gap
             visibleSlides = 3;
-            removeDots();
+            removeDots();  // Remove dots when 3 slides are visible
         }
     }
 
+    // lowers the opacity of the arrow if we are at the beginning or end of the slider
     function updateArrowVisibility() {
         prevButtons.forEach(button => button.style.opacity = currentIndex > 0 ? '1' : '0.4');
         nextButtons.forEach(button => button.style.opacity = currentIndex < totalSlides - visibleSlides ? '1' : '0.4');
     }
 
+    // Update the counter to show the number of visible slides
     function updateCounter() {
-        shownCounter.textContent = currentIndex + visibleSlides; // Update the counter to show the number of visible slides
+        shownCounter.textContent = currentIndex + visibleSlides;
     }
 
     function moveSlide(direction) {
@@ -84,7 +86,7 @@ function setupSlider(sectionSelector) {
     }
 
     function createDots() {
-        dotsContainer.innerHTML = '';
+        dotsContainer.innerHTML = ''; // Clear existing dots
         for (let i = 0; i < totalSlides; i++) {
             const dot = document.createElement('div');
             dot.classList.add('dot');
@@ -115,6 +117,8 @@ function setupSlider(sectionSelector) {
     prevButtons.forEach(button => button.addEventListener('click', () => moveSlide(-1)));
     nextButtons.forEach(button => button.addEventListener('click', () => moveSlide(1)));
 
+
+    // changes parameters on screen resize
     window.addEventListener('resize', () => {
         updateSlideParameters();
         updateArrowVisibility();

@@ -6,9 +6,15 @@
     color: white;
 }
 
+
+.unsereGerichte .text{
+    margin: auto;
+    margin-bottom: var(--section-padding-top);
+}
+
 .unsereGerichte h2{
-    text-align: center;
     margin-bottom: var(--title-mb);
+    text-align: center;
     color: var(--accent-color);
     position: relative;
 }
@@ -26,41 +32,59 @@
 }
 
 .unsereGerichte p{
-    text-align: center;
-    width: 70%;
     margin: auto;
+    width: 70%;
     font-size: 1.2rem;
-    margin-bottom: 100px;
-    line-height: 1.4;
     color: rgb(243, 243, 243);
+    text-align: center;
 }
 
 
 .unsereGerichte .slider-container{
-    width: 95%;
-    margin: auto;
-    height: 85vh;
-    overflow: hidden;
     position: relative;
+    width: 90vw;
+    height: 80vh;
+    margin: auto;
+    overflow: hidden;
 }
 
+.unsereGerichte .slider-container .counter{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    top: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 0 0 0 10px;
+    z-index: 20;
+}
 
 .unsereGerichte .slider-container .slider{
     display: flex;
     width: fit-content;
     height: 100%;
     transition: transform 1s ease;
+    cursor: grab;
+}
 
-    scroll-snap-type: x mandatory;
-    scroll-padding: 0 1vw; /* optional */
-    -webkit-overflow-scrolling: touch;
+.unsereGerichte .slider-container .slider.grabbing{
+    cursor: grabbing;
 }
 
 .unsereGerichte .slider-container .slider .slide{
-    width: 95vw;
+    width: 90vw;
     height: 100%;
 
-    scroll-snap-align: start; /* oder center, je nach Präferenz */
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 .unsereGerichte .slider-container .slider .slide img{
@@ -68,14 +92,12 @@
     height: 100%;
     object-fit: cover;
     object-position: bottom;
-}
 
-.unsereGerichte .slider-container .slider .slide:nth-child(5) img{
-    object-position: bottom;
-}
-
-.unsereGerichte .mobile-arrows{
-    display: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 .unsereGerichte .slider-container .desktop-arrows .prev,
@@ -106,66 +128,16 @@
 }
 
 
-.unsereGerichte .slider-container .counter{
-    position: absolute;
+
+.unsereGerichte .dots{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.1rem;
-    top: 0;
-    right: 0;
-    background-color: rgba(0,0,0,0.5);
-    color: white;
-    padding: 5px 10px;
-    border-radius: 0 0 0 10px;
-    z-index: 20;
-}
-
-.unsereGerichte .slider-container .logo{
-    position: absolute;
-    bottom: 0;
-    right: 50%;
-    transform: translateX(50%);
-    width: 300px;
-    height:100px;
-}
-
-.unsereGerichte .slider-container .logo img{
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-
-/* mobile arrows */
-.unsereGerichte .mobile-arrows{
-    display: none;
-}
-
-
-.unsereGerichte .mobile-arrows{
-    gap: 50px;
     align-items: center;
     justify-content: center;
     margin-top: 50px;
-}
-
-.unsereGerichte .mobile-arrows i{
-    font-size: 1rem;
-    padding: 10px;
-    /* background: rgb(215, 215, 215); */
-    border-radius: 50%;
-    cursor: pointer;
-    transition: 1s;
-}
-
-.unsereGerichte .mobile-arrows .dots{
-    display: flex;
     gap: 15px;
 }
 
-.unsereGerichte .mobile-arrows .dots .dot{
+.unsereGerichte .dots .dot{
     width: 12px;
     height: 12px;
     border-radius: 50%;
@@ -206,7 +178,7 @@
 
 
 
-
+/* Fsize adjustment */
 @media screen and (max-width: 1800px){
     .unsereGerichte p{
         width: 80%;
@@ -226,10 +198,8 @@
     }
 }
 
+/* hide arrows since prob touch device */
 @media screen and (max-width: 1000px){
-    .unsereGerichte .mobile-arrows{
-        display: flex;
-    }
     .unsereGerichte .slider-container .desktop-arrows{
         display: none;
     }
@@ -238,6 +208,8 @@
     }
 }
 
+
+/* set Menü link underneath */
 @media screen and (max-width: 900px){
     .unsereGerichte h2{
         display: flex;
@@ -245,7 +217,7 @@
         align-items: center;
         gap: 30px;
     }
-    
+
     .unsereGerichte h2 a{
         position: static;
     }
