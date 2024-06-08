@@ -8,9 +8,13 @@ function setupKuecheSlider(sectionSelector) {
     const totalCounter = section.querySelector('.counter .total');
     const dotsContainer = section.querySelector('.dots');
     let currentIndex = 0;
+    let isDragging = false;
+    let startX = 0;
+    let currentX = 0;
+    let moveX = 0;
+    let startTranslate = 0;
+    let currentTranslate = 0;
     const slideWidth = 90; // Fixed slide width in vw
-    const gapWidth = 0; // No gap width
-    const visibleSlides = 1; // Always showing one slide at a time
 
     const slides = slider.querySelectorAll('.slide');
     const totalSlides = slides.length;
@@ -18,23 +22,61 @@ function setupKuecheSlider(sectionSelector) {
 
     function updateButtonVisibility() {
         prevButtons.forEach(button => button.style.opacity = currentIndex > 0 ? '1' : '0.5');
-        nextButtons.forEach(button => button.style.opacity = currentIndex < totalSlides - visibleSlides ? '1' : '0.5');
+        nextButtons.forEach(button => button.style.opacity = currentIndex < totalSlides - 1 ? '1' : '0.5');
     }
 
-    function moveSlide(direction) {
-        currentIndex += direction;
+    function moveSlide(index) {
+        if (index < 0) index = 0;
+        if (index > totalSlides - 1) index = totalSlides - 1;
 
-        if (currentIndex < 0) {
-            currentIndex = 0;
-        } else if (currentIndex > totalSlides - visibleSlides) {
-            currentIndex = totalSlides - visibleSlides;
-        }
-
-        const slideMove = slideWidth + gapWidth;
-        slider.style.transform = `translateX(${-currentIndex * slideMove}vw)`;
-        shownCounter.textContent = (currentIndex + visibleSlides).toString(); // Updates visible slides counter
+        currentIndex = index;
+        slider.style.transition = 'transform 0.5s';
+        slider.style.transform = `translateX(${-currentIndex * slideWidth}vw)`;
+        shownCounter.textContent = (currentIndex + 1).toString(); // Updates visible slides counter
         updateButtonVisibility();
         updateDots();
+    }
+
+    function startDrag(event) {
+        isDragging = true;
+        startX = event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
+        startTranslate = getCurrentTranslate();
+        slider.style.transition = 'none';
+        slider.classList.add('grabbing'); // Add grabbing class
+    }
+
+    function onDragging(event) {
+        if (!isDragging) return;
+        currentX = event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
+        moveX = currentX - startX;
+        currentTranslate = startTranslate + (moveX / window.innerWidth) * 100;
+
+        // Limit dragging beyond the first and last slide
+        const maxTranslate = 0;
+        const minTranslate = -(totalSlides - 1) * slideWidth;
+        currentTranslate = Math.max(Math.min(currentTranslate, maxTranslate), minTranslate);
+
+        slider.style.transform = `translateX(${currentTranslate}vw)`;
+    }
+
+    function stopDrag() {
+        if (!isDragging) return;
+        isDragging = false;
+
+        const movedBy = currentTranslate - startTranslate;
+        if (movedBy < -slideWidth / 4) {
+            currentIndex++;
+        } else if (movedBy > slideWidth / 4) {
+            currentIndex--;
+        }
+        moveSlide(currentIndex);
+        slider.classList.remove('grabbing'); // Remove grabbing class
+    }
+
+    function getCurrentTranslate() {
+        const style = window.getComputedStyle(slider);
+        const matrix = new WebKitCSSMatrix(style.transform);
+        return (matrix.m41 / window.innerWidth) * 100; // Convert to vw
     }
 
     function createDots() {
@@ -43,10 +85,9 @@ function setupKuecheSlider(sectionSelector) {
             for (let i = 0; i < totalSlides; i++) {
                 const dot = document.createElement('div');
                 dot.classList.add('dot');
-                if (i === 0) dot.classList.add('active');
+                if (i === currentIndex) dot.classList.add('active');
                 dot.addEventListener('click', () => {
-                    currentIndex = i;
-                    moveSlide(0);
+                    moveSlide(i);
                 });
                 dotsContainer.appendChild(dot);
             }
@@ -60,12 +101,15 @@ function setupKuecheSlider(sectionSelector) {
         });
     }
 
-    function removeDots() {
-        dotsContainer.innerHTML = '';
-    }
+    prevButtons.forEach(button => button.addEventListener('click', () => moveSlide(currentIndex - 1)));
+    nextButtons.forEach(button => button.addEventListener('click', () => moveSlide(currentIndex + 1)));
 
-    prevButtons.forEach(button => button.addEventListener('click', () => moveSlide(-1)));
-    nextButtons.forEach(button => button.addEventListener('click', () => moveSlide(1)));
+    slider.addEventListener('mousedown', startDrag);
+    slider.addEventListener('touchstart', startDrag);
+    document.addEventListener('mousemove', onDragging);
+    document.addEventListener('touchmove', onDragging);
+    document.addEventListener('mouseup', stopDrag);
+    document.addEventListener('touchend', stopDrag);
 
     createDots();
     updateButtonVisibility();
@@ -73,6 +117,7 @@ function setupKuecheSlider(sectionSelector) {
     window.addEventListener('resize', () => {
         createDots(); // Recreate dots on resize if the window size changes
         updateDots(); // Update dots to reflect the current state
+        moveSlide(currentIndex); // Ensure the slider is correctly positioned after resize
     });
 }
 
