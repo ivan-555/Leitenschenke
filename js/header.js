@@ -104,7 +104,7 @@ let sections = document.querySelectorAll("section");
 let navLinks = document.querySelectorAll("nav ul li a");
 
 window.addEventListener("scroll", () => {
-    let currentSection = "main";
+    let currentSection = "willkommen";
     sections.forEach(section => {
         if (window.scrollY >= section.offsetTop - 400) { // if the top end of the section with a preferred offset is less than the window's scrollY
             currentSection = section.id; // set the section we are on as current Section

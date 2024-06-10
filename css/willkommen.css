@@ -1,4 +1,4 @@
-main .landing-page{
+.willkommen .landing-page{
     /* Background Gradient ist set trough JS after Video is loaded */
     position: relative;
     width: 100%;
@@ -7,7 +7,7 @@ main .landing-page{
     padding: 20vh 0 0 0; /* spaces the heading from the top */
 }
 
-#background-video {
+.willkommen .landing-page #background-video {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -33,7 +33,7 @@ main .landing-page{
 }
 
 
-main .landing-page span{
+.willkommen .landing-page span{
     color: rgb(239, 239, 239);
     font-size: 1.2rem;
     text-align: center;
@@ -41,14 +41,14 @@ main .landing-page span{
     margin-bottom: 20px;
 }
 
-main .landing-page img.heading{
+.willkommen .landing-page img.heading{
     width: 700px;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
 }
 
-main .landing-page i {
+.willkommen .landing-page i {
     color: white;
     position: absolute;
     bottom: 100px;
@@ -60,16 +60,16 @@ main .landing-page i {
     border-radius: 50%;
 }
 
-main .landing-page i {
+.willkommen .landing-page i {
     opacity: 0;
     animation: wiggleContinuous 4s infinite 2.5s, fadeIn calc(var(--load-duration) + 1s) forwards 1.5s; /* fadeIn is defined at  on page load animations underneath */
 }
 /* Hover effect */
-main .landing-page i:hover {
+.willkommen .landing-page i:hover {
     animation: wiggle 0.5s, fadeIn calc(var(--load-duration) + 1s) forwards 1.5s;
 }
 /* Onclick animation */
-main .landing-page i.animated {
+.willkommen .landing-page i.animated {
     animation: swipe 1s ease-out;
 }
 
@@ -136,7 +136,7 @@ main .landing-page i.animated {
 
 
     	/* NEWS */
-main .landing-page .news{
+.willkommen .landing-page .news{
     position: absolute;
     top: 50%;
     transform: translateY(120px);
@@ -148,7 +148,7 @@ main .landing-page .news{
     display: none;
 }
 
-main .landing-page .news span{
+.willkommen .landing-page .news span{
     margin: 10px;
     text-align: left;
 }
@@ -169,13 +169,13 @@ main .landing-page .news span{
     }
 }
 
-main .landing-page span {
+.willkommen .landing-page span {
     opacity: 0;
     animation: fadeIn calc(var(--load-duration) + 1s) forwards; /* add 1s to the root load duration */
     animation-delay: 0.2s; /* delays the animation after page loads */
 }
 
-main .landing-page img.heading {
+.willkommen .landing-page img.heading {
     opacity: 0;
     animation: fadeIn calc(var(--load-duration) + 1s) forwards; /* add 1s to the root load duration */
     animation-delay: 0.2s; /* delays the animation after page loads */
@@ -192,47 +192,47 @@ main .landing-page img.heading {
 /* Media Queries */
 /* font adjusts */
 @media screen and (max-width: 1600px){
-    main .landing-page .news span{
+    .willkommen .landing-page .news span{
         font-size: 1.1rem;
     }
 }
 @media screen and (max-width: 1000px){
-    main .landing-page .news span{
+    .willkommen .landing-page .news span{
         font-size: 1rem;
     }
 }
 @media screen and (max-width: 700px){
-    main .landing-page .news span{
+    .willkommen .landing-page .news span{
         font-size: 0.9rem;
     }
 }
 @media screen and (max-width: 500px){
-    main .landing-page .news span{
+    .willkommen .landing-page .news span{
         font-size: 0.8rem;
     }
 }
 @media screen and (max-width: 430px){
-    main .landing-page .news span{
+    .willkommen .landing-page .news span{
         font-size: 0.7rem;
     }
 }
 @media screen and (max-width: 380px){
-    main .landing-page .news span{
+    .willkommen .landing-page .news span{
         font-size: 0.6rem;
     }
 }
 @media screen and (max-width: 330px){
-    main .landing-page .news span{
+    .willkommen .landing-page .news span{
         font-size: 0.5rem;
     }
 }
 
 
 @media screen and (max-width: 600px){
-    main .landing-page img.heading{
+    .willkommen .landing-page img.heading{
         width: 100%;
     }
-    main .landing-page span{
+    .willkommen .landing-page span{
         font-size: 1.1rem;
     }
 }
@@ -242,10 +242,10 @@ main .landing-page img.heading {
 
     /* Height Querys */
 @media (max-height: 900px){
-    main .landing-page i {
+    .willkommen .landing-page i {
         bottom: 50px;
     }
-    #background-video {
+    .willkommen .landing-page #background-video {
         top: 40%;  /* to make more of the terasse visible */
         min-height: 100%;
         animation: unset; /* delete animation on mobile to avoid underflow */
