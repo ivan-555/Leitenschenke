@@ -9,11 +9,12 @@ function setupSlider(sectionSelector) {
     const dotsContainer = section.querySelector('.dots');
     let currentIndex = 0;
     let isDragging = false;
-    let startX, startTranslate;
+    let startX = 0;
+    let startTranslate = 0;
 
     const slides = slider.querySelectorAll('.slide');
     const totalSlides = slides.length;
-    let slideWidth, gapWidth, visibleSlides;
+    let slideWidth = 0, gapWidth = 0, visibleSlides = 0;
 
     totalCounter.textContent = totalSlides; // Set the total number of slides
 
@@ -59,7 +60,7 @@ function setupSlider(sectionSelector) {
 
     function startDrag(event) {
         isDragging = true;
-        startX = event.clientX;
+        startX = event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
         startTranslate = parseInt(window.getComputedStyle(slider).transform.split(',')[4] || 0);
         slider.style.transition = 'none';
         slider.classList.add('grabbing'); // Add grabbing class
@@ -67,7 +68,7 @@ function setupSlider(sectionSelector) {
 
     function onDragging(event) {
         if (!isDragging) return;
-        const currentX = event.clientX;
+        const currentX = event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
         const dx = currentX - startX;
         const newTranslate = startTranslate + dx;
         const maxTranslate = 0;
@@ -76,6 +77,7 @@ function setupSlider(sectionSelector) {
     }
 
     function stopDrag(event) {
+        if (!isDragging) return;
         isDragging = false;
         slider.style.transition = 'transform 0.5s';
         slider.classList.remove('grabbing'); // Remove grabbing class
@@ -111,12 +113,14 @@ function setupSlider(sectionSelector) {
     }
 
     slider.addEventListener('mousedown', startDrag);
+    slider.addEventListener('touchstart', startDrag);
     document.addEventListener('mousemove', onDragging);
+    document.addEventListener('touchmove', onDragging);
     document.addEventListener('mouseup', stopDrag);
+    document.addEventListener('touchend', stopDrag);
 
     prevButtons.forEach(button => button.addEventListener('click', () => moveSlide(-1)));
     nextButtons.forEach(button => button.addEventListener('click', () => moveSlide(1)));
-
 
     // changes parameters on screen resize
     window.addEventListener('resize', () => {
