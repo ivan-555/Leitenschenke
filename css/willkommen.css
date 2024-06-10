@@ -145,7 +145,7 @@
     border-radius: 10px 0 0 10px;
     right: 0;
     max-width: 90vw;
-    display: none;
+    /* display: none; */
 }
 
 .willkommen .landing-page .news span{
@@ -183,6 +183,22 @@
 
 /* Arrow Down Page Load Animation is set above */
 
+@keyframes newsSlideInFromRight{
+    0%{
+        opacity: 0;
+        transform: translate(100%, 120px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0, 120px);
+    }
+}
+
+.willkommen .landing-page .news{
+    opacity: 0;
+    animation: newsSlideInFromRight var(--load-duration) forwards;
+    animation-delay: 1s;
+}
 
 
 
@@ -190,6 +206,15 @@
 
 
 /* Media Queries */
+/* same vw where mobile shortcuts are shown at the bottom and desktop shortcuts are hidden which creates space above */
+@media (max-width: 750px){
+    /* delete transform to put the news higher to not clash with the arrow down on mobile*/
+    .willkommen .landing-page .news{
+        transform: translateY(0px);
+    }
+}
+
+
 /* font adjusts */
 @media screen and (max-width: 1600px){
     .willkommen .landing-page .news span{
@@ -242,9 +267,6 @@
 
     /* Height Querys */
 @media (max-height: 900px){
-    .willkommen .landing-page i {
-        bottom: 50px;
-    }
     .willkommen .landing-page #background-video {
         top: 40%;  /* to make more of the terasse visible */
         min-height: 100%;

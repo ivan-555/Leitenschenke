@@ -100,6 +100,7 @@
     <!-- Custom JS -->
     <script src="../js/root.js" defer></script>
     <script src="../js/header.js" defer></script>
+    <script src="../js/shortcuts.js" defer></script>
     <script src="../js/willkommen.js" defer></script>
     <script src="../js/überUns.js" defer></script>
     <script src="../js/unsereGerichte.js" defer></script>
@@ -141,38 +142,76 @@
     </header>
 
     <div class="shortcuts">
-        <div class="shortcut tel"><i class="fa-solid fa-phone"></i><a href="tel:+393338563472" class="tel">+39 333 8563472</a></div>
-        <div class="shortcut location"><i class="fa-solid fa-location-dot"></i><a href="https://www.google.it/maps/place/Gasthaus+Leitenschenke/@46.6341322,11.1358852,17z/data=!3m1!4b1!4m6!3m5!1s0x4782be865296c067:0xb5a8bdf307f6edd4!8m2!3d46.6341285!4d11.1384601!16s%2Fg%2F11btrr3tbx?entry=ttu">Trovaci</a></div>
-        <div class="shortcut öffnungszeiten">
-            <div class="bar">
-                <i class="fa-regular fa-clock"></i>
-                <span>Orari di apertura</span>
-            </div>
-            <div class="details">
-                <li class="saisondauer">da Marzo a Ottobre</li>
-                <div class="spacer">
-                    <ul class="left">
-                        <li>Lunedi:</li>
-                        <li>Martedi:</li>
-                        <li>Mercoledi:</li>
-                        <li>Giovedi:</li>
-                        <li>Venerdi:</li>
-                        <li class="ruhetag">Sabato:</li>
-                        <li>Domenica:</li>
-                        <li class="warme-küche">Cucina calda:</li>
-                    </ul>
-                    <ul class="right">
-                        <li>10:30 - 17:00</li>
-                        <li>10:30 - 17:00</li>
-                        <li>10:30 - 17:00</li>
-                        <li>10:30 - 17:00</li>
-                        <li>10:30 - 17:00</li>
-                        <li class="ruhetag">Chiuso</li>
-                        <li>10:30 - 17:00</li>
-                        <li class="warme-küche">10:30 - 16:00</li>
-                    </ul>
+        <div class="desktop-shortcuts">
+            <div class="shortcut tel"><i class="fa-solid fa-phone"></i><a href="tel:+393338563472" class="tel">+39 333 8563472</a></div>
+            <div class="shortcut location"><i class="fa-solid fa-location-dot"></i><a href="https://www.google.it/maps/place/Gasthaus+Leitenschenke/@46.6341322,11.1358852,17z/data=!3m1!4b1!4m6!3m5!1s0x4782be865296c067:0xb5a8bdf307f6edd4!8m2!3d46.6341285!4d11.1384601!16s%2Fg%2F11btrr3tbx?entry=ttu">Trovaci</a></div>
+            <div class="shortcut öffnungszeiten">
+                <div class="bar">
+                    <i class="fa-regular fa-clock"></i>
+                    <span>Orari di apertura</span>
+                </div>
+                <div class="details">
+                    <li class="saisondauer">da Marzo a Ottobre</li>
+                    <div class="spacer">
+                        <ul class="left">
+                            <li>Lunedi:</li>
+                            <li>Martedi:</li>
+                            <li>Mercoledi:</li>
+                            <li>Giovedi:</li>
+                            <li>Venerdi:</li>
+                            <li class="ruhetag">Sabato:</li>
+                            <li>Domenica:</li>
+                            <li class="warme-küche">cucina calda:</li>
+                        </ul>
+                        <ul class="right">
+                            <li>10:30 - 17:00</li>
+                            <li>10:30 - 17:00</li>
+                            <li>10:30 - 17:00</li>
+                            <li>10:30 - 17:00</li>
+                            <li>10:30 - 17:00</li>
+                            <li class="ruhetag">Chiuso</li>
+                            <li>10:30 - 17:00</li>
+                            <li class="warme-küche">10:30 - 16:00</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+        </div>
+
+        <div class="mobile-shortcuts">
+            <a href="tel:+393338563472" class="shortcut tel"><i class="fa-solid fa-phone"></i></a>
+            <a href="https://www.google.it/maps/place/Gasthaus+Leitenschenke/@46.6341322,11.1358852,17z/data=!3m1!4b1!4m6!3m5!1s0x4782be865296c067:0xb5a8bdf307f6edd4!8m2!3d46.6341285!4d11.1384601!16s%2Fg%2F11btrr3tbx?entry=ttu" class="shortcut location"><i class="fa-solid fa-location-dot"></i></a>
+            <div class="shortcut öffnungszeiten">
+                <div class="icon">
+                    <i class="fa-regular fa-clock"></i>
+                </div>
+                <div class="details">
+                    <div class="close"><i class="fa-solid fa-x"></i></div>
+                    <li class="saisondauer">da Marzo a Ottobre</li>
+                    <div class="spacer">
+                        <ul class="left">
+                            <li>Lunedi:</li>
+                            <li>Martedi:</li>
+                            <li>Mercoledi:</li>
+                            <li>Giovedi:</li>
+                            <li>Venerdi:</li>
+                            <li class="ruhetag">Sabato:</li>
+                            <li>Domenica:</li>
+                            <li class="warme-küche">cucina calda:</li>
+                        </ul>
+                        <ul class="right">
+                            <li>10:30 - 17:00</li>
+                            <li>10:30 - 17:00</li>
+                            <li>10:30 - 17:00</li>
+                            <li>10:30 - 17:00</li>
+                            <li>10:30 - 17:00</li>
+                            <li class="ruhetag">Chiuso</li>
+                            <li>10:30 - 17:00</li>
+                            <li class="warme-küche">10:30 - 16:00</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>    
         </div>
     </div>
 

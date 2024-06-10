@@ -1,4 +1,4 @@
-.shortcuts{
+.desktop-shortcuts{
     position: fixed;
     right: -350px; /* changed to -300px by animation forwards */
     top: 50%;
@@ -10,7 +10,7 @@
     z-index: 1000;
 }
 
-.shortcuts .shortcut{
+.desktop-shortcuts .shortcut{
     width: 350px;
     display: flex;
     align-items: center;
@@ -22,17 +22,17 @@
 
 
 /* open animation */
-.shortcuts .shortcut.tel:hover,
-.shortcuts .shortcut.location:hover,
-.shortcuts .shortcut.öffnungszeiten:hover{
+.desktop-shortcuts .shortcut.tel:hover,
+.desktop-shortcuts .shortcut.location:hover,
+.desktop-shortcuts .shortcut.öffnungszeiten:hover{
     transform: translateX(-300px);
 }
 
-.shortcuts .shortcut.öffnungszeiten:hover{
+.desktop-shortcuts .shortcut.öffnungszeiten:hover{
     height: 370px;
 }
 
-.shortcuts .shortcut i{
+.desktop-shortcuts .shortcut i{
     width: 50px;
     height: 50px;
     display: flex;
@@ -42,26 +42,26 @@
 }
 
 /* centers shortcut text */
-.shortcuts .shortcut a,
-.shortcuts .shortcut span{
+.desktop-shortcuts .shortcut a,
+.desktop-shortcuts .shortcut span{
     margin: auto;
 }
 
-.shortcuts .shortcut.öffnungszeiten{
+.desktop-shortcuts .shortcut.öffnungszeiten{
     background: none;
     height: 50px;
     display: block;
     overflow: hidden;
 }
 
-.shortcuts .shortcut.öffnungszeiten .bar{
+.desktop-shortcuts .shortcut.öffnungszeiten .bar{
     display: flex;
     background: var(--accent-color-dark);
     border-radius: 20px 0 0 0;
     transition: background 1s;
 }
 
-.shortcuts .shortcut.öffnungszeiten .details{
+.desktop-shortcuts .shortcut.öffnungszeiten .details{
     width: 350px;
     background: var(--accent-color-dark);
     padding-top: 20px;
@@ -70,13 +70,13 @@
     transition: background 1s;
 }
 
-.shortcuts .shortcut.öffnungszeiten .details .saisondauer{
+.desktop-shortcuts .shortcut.öffnungszeiten .details .saisondauer{
     margin-bottom: 20px;
     text-align: center;
     color: var(--accent-color);
 }
 
-.shortcuts .shortcut.öffnungszeiten .details .spacer{
+.desktop-shortcuts .shortcut.öffnungszeiten .details .spacer{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -84,15 +84,18 @@
     margin: auto;
 }
 
-.shortcuts .shortcut.öffnungszeiten .details .spacer li.ruhetag{
+.desktop-shortcuts .shortcut.öffnungszeiten .details .spacer li.ruhetag{
     color: var(--accent-color);
 }
 
-.shortcuts .shortcut.öffnungszeiten .details .spacer li.warme-küche{
+.desktop-shortcuts .shortcut.öffnungszeiten .details .spacer li.warme-küche{
     margin-top: 30px;
 }
 
 
+.mobile-shortcuts{
+    display: none;
+}
 
 
 
@@ -111,7 +114,7 @@
     }
 }
 
-.shortcuts{
+.desktop-shortcuts{
     opacity: 0;
     animation: slideInFromRight var(--load-duration) forwards;
     animation-delay: 1s;
@@ -127,18 +130,123 @@
 
 
 
+/* hide desktop shortcuts and show mobile shortcuts */
+@media (max-width: 750px){
+    .desktop-shortcuts{
+        display: none;
+    }
 
-@media (max-width: 850px){
-    .shortcuts .shortcut i{
-        width: 40px;
-        height: 40px;
+    .mobile-shortcuts{
+        position: fixed;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        color: white;
+        z-index: 1000;
+        background: var(--accent-color-dark);
+    }
+    
+    .mobile-shortcuts .shortcut{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    
+    .mobile-shortcuts .shortcut i{
+        padding: 15px; /* easier to click for mobile users */
+        font-size: 1.3rem;
+    }
+
+    /* closed state */
+    .mobile-shortcuts .shortcut.öffnungszeiten .details{
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.5s ease;
+    }
+
+    /* open state */
+    .mobile-shortcuts .shortcut.öffnungszeiten .details.open{
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    .mobile-shortcuts .shortcut.öffnungszeiten .details{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        max-width: 400px;
+        background: var(--accent-color-dark);
+        padding-top: 50px;
+        padding-bottom: 50px;
+        border-radius: 10px;
+    }
+    
+    .mobile-shortcuts .shortcut.öffnungszeiten .details .saisondauer{
+        margin-bottom: 20px;
+        text-align: center;
+        color: var(--accent-color);
+    }
+    
+    .mobile-shortcuts .shortcut.öffnungszeiten .details .spacer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        margin: auto;
+    }
+    
+    .mobile-shortcuts .shortcut.öffnungszeiten .details .spacer li.ruhetag{
+        color: var(--accent-color);
+    }
+    
+    .mobile-shortcuts .shortcut.öffnungszeiten .details .spacer li.warme-küche{
+        margin-top: 30px;
+    }
+
+    .mobile-shortcuts .shortcut.öffnungszeiten .details .close{
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        cursor: pointer;
+    }
+    .mobile-shortcuts .shortcut.öffnungszeiten .details .close i{
         font-size: 1.1rem;
-        transform: translateX(1px);
     }
-    .shortcuts .shortcut{
-        width: 340px;
+
+
+
+
+    /* Animations on page load */
+    @keyframes fadeInFromBottom{
+        0%{
+            opacity: 0;
+            bottom: -50px;
+        }
+        50%{
+            opacity: 0.7;
+            bottom: 0;
+        }
+        100%{
+            opacity: 1;
+            bottom: 0;
+        }
     }
-    .shortcuts .shortcut.öffnungszeiten{
-        height: 40px;
+
+    .mobile-shortcuts{
+        opacity: 0;
+        animation: fadeInFromBottom var(--load-duration) forwards;
+        animation-delay: 0.2s;
     }
 }
