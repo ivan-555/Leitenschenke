@@ -139,13 +139,13 @@
 .willkommen .landing-page .news{
     position: absolute;
     top: 50%;
+    right: 0;
     transform: translateY(120px);
     background: var(--accent-color-dark);
     padding: 10px;
     border-radius: 10px 0 0 10px;
-    right: 0;
     max-width: 90vw;
-    /* display: none; */
+    display: none;
 }
 
 .willkommen .landing-page .news span{
@@ -207,12 +207,13 @@
 
 /* Media Queries */
 /* same vw where mobile shortcuts are shown at the bottom and desktop shortcuts are hidden which creates space above */
-@media (max-width: 750px){
+@media (max-height: 750px) and (max-width: 750px) {
     /* delete transform to put the news higher to not clash with the arrow down on mobile*/
-    .willkommen .landing-page .news{
-        transform: translateY(0px);
+    .willkommen .landing-page .news {
+        transform: translateY(0px) !important;
     }
 }
+
 
 
 /* font adjusts */
