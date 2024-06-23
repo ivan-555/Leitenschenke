@@ -17,6 +17,8 @@
     --bg-color: rgb(255, 250, 244);
     --title-mb: 35px;
     --load-duration: 1s;
+
+    color-scheme: light; /* avoids changed colors when darkmode settings / website is always light mode */
 }
 
 body{
@@ -71,7 +73,6 @@ p{
 ::-webkit-scrollbar-thumb:hover {
     background: #555; /* Hintergrundfarbe des Scrollleisten-Thumbs beim Hovern */
 }
-
 
 
 /* deletes scroll-margin-top: var(--header-height); cause there is no header */
