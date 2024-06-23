@@ -82,8 +82,14 @@ function setupSlider(sectionSelector) {
         slider.style.transition = 'transform 0.5s';
         slider.classList.remove('grabbing'); // Remove grabbing class
         const endTranslate = parseInt(window.getComputedStyle(slider).transform.split(',')[4]);
-        const nearestIndex = -Math.round(endTranslate / (slideWidth + gapWidth));
-        currentIndex = Math.max(0, Math.min(nearestIndex, totalSlides - visibleSlides));
+        const movedBy = endTranslate - startTranslate;
+        const snapThreshold = slideWidth / 4; // Adjusted to 1/4 of the slide width
+        if (movedBy < -snapThreshold) {
+            currentIndex++;
+        } else if (movedBy > snapThreshold) {
+            currentIndex--;
+        }
+        currentIndex = Math.max(0, Math.min(currentIndex, totalSlides - visibleSlides));
         moveSlide(0);
     }
 
@@ -94,8 +100,7 @@ function setupSlider(sectionSelector) {
             dot.classList.add('dot');
             if (i === currentIndex) dot.classList.add('active');
             dot.addEventListener('click', () => {
-                currentIndex = i;
-                moveSlide(0);
+                moveSlide(i - currentIndex);
             });
             dotsContainer.appendChild(dot);
         }
