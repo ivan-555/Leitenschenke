@@ -171,6 +171,7 @@
 @media (max-width: 600px) {
     .bewertungen .bewertung{
         border-radius: 100px;
+        padding: 40px;
     }
     .bewertungen .bewertung p{
         width: 100%;
