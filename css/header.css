@@ -496,8 +496,38 @@ header .language-settings a:nth-child(2){
     header .logo{
         margin-bottom: 40px;
     }
-
     header .language-settings{
         margin-bottom: 40px;
+    }
+}
+
+@media (max-height: 700px) and (max-width: 1450px){
+    header{
+        padding: 50px 0 100px 0;
+    }
+    header nav ul li a{
+        padding: 10px;
+        font-size: 1.1rem;
+    }
+    header .logo{
+        margin-bottom: 30px;
+    }
+    header .language-settings{
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-height: 550px) and (max-width: 1450px){
+    header{
+        padding: 30px 0 100px 0;
+    }
+    header nav ul li a{
+        padding: 10px;
+    }
+    header .logo{
+        margin-bottom: 20px;
+    }
+    header .language-settings{
+        margin-bottom: 20px;
     }
 }
