@@ -18,7 +18,7 @@
     --title-mb: 35px;
     --load-duration: 1s;
 
-    color-scheme: light; /* avoids changed colors when darkmode settings / website is always light mode */
+    color-scheme: light; /* only light mode */
 }
 
 body{
