@@ -50,38 +50,6 @@
     <link rel="alternate" href="https://leitenschenke.it/" hreflang="de">
     <link rel="alternate" href="https://leitenschenke.it/it/" hreflang="it">
     <link rel="alternate" hreflang="x-default" href="https://leitenschenke.it/">
-    <!-- Language Cookies -->
-    <script>
-        function setLanguageCookie(lang) {
-            var d = new Date();
-            d.setTime(d.getTime() + (1 * 24 * 60 * 60 * 1000)); // Cookie-Gültigkeit: 1 Tag
-            var expires = "expires=" + d.toUTCString();
-            document.cookie = "site_language=" + lang + ";" + expires + ";path=/";
-        }
-
-        function getLanguageCookie() {
-            var name = "site_language=";
-            var decodedCookie = decodeURIComponent(document.cookie);
-            var ca = decodedCookie.split(';');
-            for (var i = 0; i < ca.length; i++) {
-                var c = ca[i];
-                while (c.charAt(0) == ' ') {
-                    c = c.substring(1);
-                }
-                if (c.indexOf(name) == 0) {
-                    return c.substring(name.length, c.length);
-                }
-            }
-            return "";
-        }
-
-        // Beispiel: Setze die Sprache auf "de" (Deutsch)
-        setLanguageCookie('de');
-
-        // Beispiel: Hole die gespeicherte Sprache
-        var userLanguage = getLanguageCookie();
-        console.log("User Language:", userLanguage);
-    </script>
     <!-- Canonical Link -->
     <link rel="canonical" href="https://leitenschenke.it/">
     <!-- Favicon -->

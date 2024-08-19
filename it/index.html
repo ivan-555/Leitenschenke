@@ -50,38 +50,6 @@
     <link rel="alternate" href="https://leitenschenke.it/" hreflang="de">
     <link rel="alternate" href="https://leitenschenke.it/it/" hreflang="it">
     <link rel="alternate" hreflang="x-default" href="https://leitenschenke.it/">
-    <!-- Language Cookies -->
-    <script>
-        function setLanguageCookie(lang) {
-            var d = new Date();
-            d.setTime(d.getTime() + (1 * 24 * 60 * 60 * 1000)); // Cookie-Gültigkeit: 1 Tag
-            var expires = "expires=" + d.toUTCString();
-            document.cookie = "site_language=" + lang + ";" + expires + ";path=/";
-        }
-
-        function getLanguageCookie() {
-            var name = "site_language=";
-            var decodedCookie = decodeURIComponent(document.cookie);
-            var ca = decodedCookie.split(';');
-            for (var i = 0; i < ca.length; i++) {
-                var c = ca[i];
-                while (c.charAt(0) == ' ') {
-                    c = c.substring(1);
-                }
-                if (c.indexOf(name) == 0) {
-                    return c.substring(name.length, c.length);
-                }
-            }
-            return "";
-        }
-
-        // Beispiel: Setze die Sprache auf "de" (Deutsch)
-        setLanguageCookie('de');
-
-        // Beispiel: Hole die gespeicherte Sprache
-        var userLanguage = getLanguageCookie();
-        console.log("User Language:", userLanguage);
-    </script>
     <!-- Canonical Link -->
     <link rel="canonical" href="https://leitenschenke.it/it/">
     <!-- Favicon -->
@@ -515,7 +483,7 @@
                 </div>
             </div>
             <div class="right">
-                <img src="img/anfahrt.png" alt="Mappa">
+                <img src="../img/anfahrt.png" alt="Mappa">
             </div>
         </div>
     </section>
@@ -529,7 +497,7 @@
                         <li>39010 Cermes</li>
                         <li><i class="fa-solid fa-envelope"></i> <a href="mailto:info@leitenschenke.it" class="mail">info@leitenschenke.it</a></li>
                         <li><i class="fa-solid fa-phone"></i> <a href="tel:+393338563472" class="tel">+39 333 8563472</a></li>
-                        <a href="../impressum.html" class="impressum-link">Impressum</a>
+                        <a href="impressum.html" class="impressum-link">Impressum</a>
                     </ul>
                 </div>
                 <div class="spacer">
