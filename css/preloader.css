@@ -4,6 +4,41 @@
     top: 0;
     width: 100%;
     height: 100%;
-    background: white;
+    background: var(--bg-color);
     z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .5s;
+}
+
+#preloader img{
+    width: 100px;
+    opacity: 0;
+    animation: loadIn 1s ease-out forwards;
+    animation-delay: .5s;
+    filter: invert(1); /* invert color of the logo to black */
+    transition: all .5s;
+}
+
+@keyframes loadIn{
+    0%{
+        transform: scale(2);
+        opacity: 0;
+    }
+    50%{
+        transform: scale(1.7);
+        opacity: 0.4;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+@media (max-width: 500px){
+    #preloader img{
+        width: 70px;
+    }
 }

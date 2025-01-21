@@ -1,9 +1,11 @@
-window.addEventListener('load', function() {
-    const preloader = document.getElementById('preloader');
-    preloader.style.opacity = 0;
-    preloader.style.transition = 'opacity 0.5s ease-out';
+window.addEventListener("load", function() {
+    const preloader = document.getElementById("preloader");
+    const preloaderIMG = preloader.querySelector("img");
 
-    preloader.addEventListener('transitionend', function() {
-        preloader.style.display = 'none';
-    });
+    setTimeout(function() {
+        preloader.style.opacity = 0;
+        preloader.style.visibility = "hidden";
+        preloaderIMG.style.opacity = 0;
+        preloaderIMG.style.visibility = "hidden";
+    }, 2000);
 });
