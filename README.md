@@ -14,7 +14,6 @@ Natürlich hat die Webseite eine responsive Benutzeroberfläche, die sowohl auf 
 - Ästhetisches Layout: Stilvolles und ansprechendes Design mit klarem Fokus auf die Präsentation.
 - Interaktive Elemente: Verschiedene interaktive UI-Elemente wie die Bilder Slider für eine moderne Benutzererfahrung.
 - Animierte Inhalte: Scroll Basierte Animationen der Inhalte sowie animierte Buttons.
-- SEO Optimiert: Schlüsselwörter, Beschreibung, HTML Semantik, Backlinks, Crawler Anweisungen, Schema Markup und eine Sitemap für ein bessereres Suchmaschinenranking.
 - Mehrsprachigkeit: Schaltfläche zum umschalten zwischen Deutscher und Italienischer Sprache.
 - Ladeanimation beim Aufrufen: Beim Laden der Seite wird eine Preload Animation abgespielt, bis der Inhalt der Seite geladen wurde.
   
@@ -28,12 +27,6 @@ Natürlich hat die Webseite eine responsive Benutzeroberfläche, die sowohl auf 
 ### Screenshots
 
 Füge hier Screenshots der Webseite ein, um die Benutzeroberfläche und das Design zu zeigen.
-
-### Erweiterungsmöglichkeiten
-
-- Hinzufügen eines Reservierungssystems
-- Integration von Kommentarfunktionen
-- Speißekarte einbetten
 
 ### Deployment
 
