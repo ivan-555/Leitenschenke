@@ -13,25 +13,9 @@
     left: 50%;
     transform: translate(-50%, -50%);
     min-width: 100%;
-    min-height: 104%; /* to give enough high for it to float */
+    min-height: 100%;
     z-index: -1; /* Stellt das Video hinter den Inhalt */
-    animation: float 15s infinite;
 }
-
-
-/* BG Video Animation */
-@keyframes float {
-    0% {
-        transform: translate(-50%, -50%);
-    }
-    50% {
-        transform: translate(-50%, -51.8%);
-    }
-    100% {
-        transform: translate(-50%, -50%);
-    }
-}
-
 
 .willkommen .landing-page span{
     color: rgb(239, 239, 239);
@@ -275,7 +259,5 @@
 @media (max-height: 900px){
     .willkommen .landing-page #background-video {
         top: 40%;  /* to make more of the terasse visible */
-        min-height: 100%;
-        animation: unset; /* delete animation on mobile to avoid underflow */
     }
 }
