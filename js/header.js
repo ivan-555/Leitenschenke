@@ -129,4 +129,4 @@ window.addEventListener("scroll", () => {
 hamburgerBG.classList.add("load");
 setTimeout(() => {
     hamburgerBG.classList.remove("load");
-}, 4000);
+}, 4500);
