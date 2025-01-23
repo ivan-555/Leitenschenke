@@ -231,7 +231,7 @@ header .hamburger-bg.load{
     header{
         position: fixed;
         top: 0;
-        height: 100%;
+        height: 100svh;
         width: 600px;
         display: flex;
         align-items: center;
