@@ -11,8 +11,11 @@ function checkScroll() {
     }
 }
 
-// Event-Listener für das Scroll-Ereignis
-window.addEventListener('scroll', checkScroll);
+// Header soll sich auf der Index Seite verändern aber nicht auf der Impressum Seite
+if (document.body.dataset.page !== "impressum") {
+    // Event-Listener für das Scroll-Ereignis
+    window.addEventListener('scroll', checkScroll);
+}
 
 
 // open and close navbar
