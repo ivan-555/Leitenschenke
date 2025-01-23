@@ -153,25 +153,31 @@ body[data-lang="it"] header.scrolled .language-settings a:nth-child(2){
     }
 }
 
+header{
+    opacity: 0;
+    animation: fadeIn var(--load-duration) forwards;
+    animation-delay: 3s;
+}
+
 header nav ul li a {
     opacity: 0;
     animation: scaleSlideInFromRight var(--load-duration) forwards;
 }
 /* delayed to load after the Leitenschenke heading is loaded and visible */
 header nav ul li:nth-child(1) a {
-    animation-delay: 1s; 
+    animation-delay: 3s; 
 }
 header nav ul li:nth-child(2) a {
-    animation-delay: 1.2s;
+    animation-delay: 3.2s;
 }
 header nav ul li:nth-child(3) a {
-    animation-delay: 1.4s;
+    animation-delay: 3.4s;
 }
 header nav ul li:nth-child(4) a {
-    animation-delay: 1.6s;
+    animation-delay: 3.6s;
 }
 header nav ul li:nth-child(5) a {
-    animation-delay: 1.8s;
+    animation-delay: 3.8s;
 }
 
 
@@ -180,10 +186,24 @@ header .language-settings a{
     animation: scaleSlideInFromRight var(--load-duration) forwards;
 }
 header .language-settings a:nth-child(1){
-    animation-delay: 2s;
+    animation-delay: 4s;
 }
 header .language-settings a:nth-child(2){
-    animation-delay: 2.2s;
+    animation-delay: 4.2s;
+}
+
+header .hamburger-bg{
+    opacity: 1;
+}
+header .hamburger-bg.load{
+    opacity: 0;
+    animation: fadeIn var(--load-duration);
+    animation-delay: 3s;
+}
+.hamburger{
+    opacity: 0;
+    animation: fadeIn var(--load-duration) forwards;
+    animation-delay: 3.2s;
 }
 
 
@@ -223,7 +243,6 @@ header .language-settings a:nth-child(2){
         transition: transform 0.7s, background 1s;
     }
 
-    /* html div to create de curved background behind the hamburger */
     header .hamburger-bg{
         position: absolute;
         top: 0;
@@ -233,7 +252,7 @@ header .language-settings a:nth-child(2){
         height: 60px;
         background: var(--accent-color-dark) !important;
         border-radius:  0 0 40% 0;
-        transition: opacity 0.2s, background 1s;
+        transition: background 1s;
     }
 
     header nav{
@@ -268,6 +287,10 @@ header .language-settings a:nth-child(2){
         height: 100px;
         margin-bottom: 100px;
         opacity: 1; /* deletes the on scroll visible animation */
+        /* Page Load Animation */
+        opacity: 0;
+        animation: scaleSlideInFromRight var(--load-duration) forwards;
+        animation-delay: 3s;
     }
 
     header .language-settings{
@@ -295,7 +318,6 @@ header .language-settings a:nth-child(2){
     header nav ul li a.active{
         color: var(--accent-color);
     }
-
 
     /* hamburger styling */
     .hamburger{
@@ -434,10 +456,10 @@ header .language-settings a:nth-child(2){
     }
 
     .hamburger.shiftLeft{
-        animation: shiftLeft 0.6s forwards 0.1s;
+        animation: shiftLeft 0.6s forwards 0.1s, fadeIn var(--load-duration) forwards;
     }
     .hamburger.shiftRight{
-        animation: shiftRight 0.7s forwards;
+        animation: shiftRight 0.7s forwards, fadeIn var(--load-duration) forwards;
     }
 }
 
@@ -453,11 +475,26 @@ header .language-settings a:nth-child(2){
     header .logo{
         width: 60%;
     }
+    header .hamburger-bg{
+        transition: opacity 0.3s;
+    }
+    header .hamburger-bg.hidden{
+        opacity: 0;
+    }
 }
 
 @media (max-width: 550px){
     header .logo{
         width: 80%;
+    }
+    header .hamburger-bg{
+        width: 60px;
+        height: 50px;
+    }
+    .hamburger{
+        top: 5px;
+        right: -50px;
+        scale: 0.8;
     }
 }
 

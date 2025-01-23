@@ -15,9 +15,6 @@ function checkScroll() {
 window.addEventListener('scroll', checkScroll);
 
 
-
-
-
 // open and close navbar
 const navbar = document.querySelector("#navbar");
 const hamburger = document.querySelector(".hamburger");
@@ -34,9 +31,9 @@ hamburger.onclick = () => {
         hamburger.style.transform = "translateX(-15px)";
         if (window.matchMedia('(max-width: 700px)').matches) {
             hamburger.classList.add("shiftLeft"); // shifts the x into the navbar when open
-            hamburger.classList.remove("shiftRight"); // 
+            hamburger.classList.remove("shiftRight");
             hamburger.style.transform = "translateX(0px)";
-            hamburgerBG.style.opacity = "0"; // Set opacity to 0 when navbar is open
+            hamburgerBG.classList.add("hidden") // Set opacity to 0 when navbar is open
         }
         hamburgerBG.style.backgroundColor = "var(--accent-color-dark)";
         navbar.style.backgroundColor = "var(--accent-color-dark)";
@@ -48,14 +45,13 @@ hamburger.onclick = () => {
         hamburger.style.transform = "translateX(0px)";
         if (window.matchMedia('(max-width: 700px)').matches) {
             hamburger.classList.remove("shiftLeft"); // shifts the hamburger outside the navbar when closed
-            hamburger.classList.add("shiftRight"); //
-            hamburgerBG.style.opacity = "1"; // Set opacity back to 1 when navbar is closed
+            hamburger.classList.add("shiftRight"); 
+            hamburgerBG.classList.remove("hidden") // Set opacity back to 1 when navbar is closed
         }
         hamburgerBG.style.backgroundColor = "var(--transparent-color)";
         navbar.style.backgroundColor = "var(--transparent-color)";
     }
 }
-
 
 
 
@@ -73,8 +69,8 @@ if (window.matchMedia('(max-width: 1450px)').matches) {
             hamburger.style.transform = "translateX(0px)";
             if (window.matchMedia('(max-width: 700px)').matches) {
                 hamburger.classList.remove("shiftLeft"); // shifts the hamburger outside the navbar when closed
-                hamburger.classList.add("shiftRight"); // 
-                hamburgerBG.style.opacity = "1"; // Set opacity back to 1 when navbar is closed
+                hamburger.classList.add("shiftRight");
+                hamburgerBG.classList.remove("hidden") // Set opacity back to 1 when navbar is closed
             }
             hamburgerBG.style.backgroundColor = "var(--transparent-color)";
             navbar.style.backgroundColor = "var(--transparent-color)";
@@ -88,8 +84,8 @@ if (window.matchMedia('(max-width: 1450px)').matches) {
         hamburger.style.transform = "translateX(0px)";
         if (window.matchMedia('(max-width: 700px)').matches) {
             hamburger.classList.remove("shiftLeft"); // shifts the hamburger outside the navbar when closed
-            hamburger.classList.add("shiftRight"); // 
-            hamburgerBG.style.opacity = "1"; // Set opacity back to 1 when navbar is closed
+            hamburger.classList.add("shiftRight");
+            hamburgerBG.classList.remove("hidden"); // Set opacity back to 1 when navbar is closed
         }
         hamburgerBG.style.backgroundColor = "var(--transparent-color)";
         navbar.style.backgroundColor = "var(--transparent-color)";
@@ -119,3 +115,15 @@ window.addEventListener("scroll", () => {
         }
     });
 });
+
+
+
+
+
+// Page Load Animation for Hamburger Background
+// This plays the fadeIn animation for the hamburger background on page load and removes it after 4 seconds
+// to prevent it from overwriting opacity settings permanently
+hamburgerBG.classList.add("load");
+setTimeout(() => {
+    hamburgerBG.classList.remove("load");
+}, 4000);

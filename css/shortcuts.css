@@ -117,7 +117,7 @@
 .desktop-shortcuts{
     opacity: 0;
     animation: slideInFromRight var(--load-duration) forwards;
-    animation-delay: 1s;
+    animation-delay: 4.4s;
 }
 
 
