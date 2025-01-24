@@ -155,55 +155,56 @@ body[data-lang="it"] header.scrolled .language-settings a:nth-child(2){
 
 header{
     opacity: 0;
+}
+body.page-ready header{
     animation: fadeIn var(--load-duration) forwards;
-    animation-delay: 3s;
+    animation-delay: 1s;
 }
 
-header nav ul li a {
+header nav ul li a{
     opacity: 0;
+}
+body.page-ready header nav ul li a {
     animation: scaleSlideInFromRight var(--load-duration) forwards;
 }
-/* delayed to load after the Leitenschenke heading is loaded and visible */
-header nav ul li:nth-child(1) a {
-    animation-delay: 3s; 
+body.page-ready header nav ul li:nth-child(1) a {
+    animation-delay: 1s; 
 }
-header nav ul li:nth-child(2) a {
-    animation-delay: 3.2s;
+body.page-ready header nav ul li:nth-child(2) a {
+    animation-delay: 1.2s;
 }
-header nav ul li:nth-child(3) a {
-    animation-delay: 3.4s;
+body.page-ready header nav ul li:nth-child(3) a {
+    animation-delay: 1.4s;
 }
-header nav ul li:nth-child(4) a {
-    animation-delay: 3.6s;
+body.page-ready header nav ul li:nth-child(4) a {
+    animation-delay: 1.6s;
 }
-header nav ul li:nth-child(5) a {
-    animation-delay: 3.8s;
+body.page-ready header nav ul li:nth-child(5) a {
+    animation-delay: 1.8s;
 }
-
 
 header .language-settings a{
     opacity: 0;
+}
+body.page-ready header .language-settings a{
     animation: scaleSlideInFromRight var(--load-duration) forwards;
 }
-header .language-settings a:nth-child(1){
-    animation-delay: 4s;
+body.page-ready header .language-settings a:nth-child(1){
+    animation-delay: 2s;
 }
-header .language-settings a:nth-child(2){
-    animation-delay: 4.2s;
+body.page-ready header .language-settings a:nth-child(2){
+    animation-delay: 2.2s;
 }
 
-header .hamburger-bg{
+.hamburger-bg{
     opacity: 1;
 }
-header .hamburger-bg.load{
+.hamburger-bg.load{
     opacity: 0;
-    animation: fadeIn var(--load-duration);
-    animation-delay: 3.5s;
 }
-.hamburger{
-    opacity: 0;
-    animation: fadeIn var(--load-duration) forwards;
-    animation-delay: 3.5s;
+body.page-ready .hamburger-bg.load{
+    animation: fadeIn var(--load-duration);
+    animation-delay: 1.5s;
 }
 
 
@@ -226,7 +227,7 @@ header .hamburger-bg.load{
 }
 
 
-/* first size of hamburger as sidebar */
+                                    /* first size of hamburger as sidebar */
 @media (max-width: 1450px) {
     header{
         position: fixed;
@@ -238,21 +239,20 @@ header .hamburger-bg.load{
         justify-content: start;
         flex-direction: column;
         padding: 50px 0 100px 0;
-        background: var(--accent-color-dark) !important;
+        background: var(--accent-color-dark);
         transform: translateX(-100%);
-        transition: transform 0.7s, background 1s;
+        transition: transform 0.7s;
     }
 
     header .hamburger-bg{
         position: absolute;
         top: 0;
         right: 0;
-        transform: translateX(100%); /* on the right edge of the navbar */
+        transform: translateX(100%);
         width: 80px;
         height: 60px;
-        background: var(--accent-color-dark) !important;
+        background: var(--accent-color-dark);
         border-radius:  0 0 40% 0;
-        transition: background 1s;
     }
 
     header nav{
@@ -287,10 +287,6 @@ header .hamburger-bg.load{
         height: 100px;
         margin-bottom: 100px;
         opacity: 1; /* deletes the on scroll visible animation */
-        /* Page Load Animation */
-        opacity: 0;
-        animation: scaleSlideInFromRight var(--load-duration) forwards;
-        animation-delay: 3s;
     }
 
     header .language-settings{
@@ -456,10 +452,10 @@ header .hamburger-bg.load{
     }
 
     .hamburger.shiftLeft{
-        animation: shiftLeft 0.6s forwards 0.1s, fadeIn var(--load-duration) forwards;
+        animation: shiftLeft 0.6s forwards 0.1s;
     }
     .hamburger.shiftRight{
-        animation: shiftRight 0.7s forwards, fadeIn var(--load-duration) forwards;
+        animation: shiftRight 0.7s forwards;
     }
 }
 

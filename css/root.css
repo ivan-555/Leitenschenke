@@ -19,7 +19,7 @@
     --title-mb: 35px;
     --load-duration: 1s;
 
-    color-scheme: light; /* only light mode */
+    color-scheme: light; /* pref light mode */
 }
 
 body{
@@ -37,9 +37,10 @@ html{
     overflow-x: hidden;
 }
 
+/* blocks page scrolling (when sidebar is open or when preloader is playing) */
 html.no-scroll {
     overflow: hidden;
-  }
+}
 
 a{
     color: inherit;

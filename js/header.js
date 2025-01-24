@@ -39,8 +39,6 @@ hamburger.onclick = () => {
             hamburger.style.transform = "translateX(0px)";
             hamburgerBG.classList.add("hidden") // Set opacity to 0 when navbar is open
         }
-        hamburgerBG.style.backgroundColor = "var(--accent-color-dark)";
-        navbar.style.backgroundColor = "var(--accent-color-dark)";
     } else { //to close the navbar
         document.documentElement.classList.remove("no-scroll");
         navbar.style.transform = "translateX(-100%)"; //closes navbar
@@ -53,8 +51,6 @@ hamburger.onclick = () => {
             hamburger.classList.add("shiftRight"); 
             hamburgerBG.classList.remove("hidden") // Set opacity back to 1 when navbar is closed
         }
-        hamburgerBG.style.backgroundColor = "var(--transparent-color)";
-        navbar.style.backgroundColor = "var(--transparent-color)";
     }
 }
 
@@ -78,8 +74,6 @@ if (window.matchMedia('(max-width: 1450px)').matches) {
                 hamburger.classList.add("shiftRight");
                 hamburgerBG.classList.remove("hidden") // Set opacity back to 1 when navbar is closed
             }
-            hamburgerBG.style.backgroundColor = "var(--transparent-color)";
-            navbar.style.backgroundColor = "var(--transparent-color)";
         }
     })
     leitenschenkeLogo.onclick = () => {
@@ -94,8 +88,6 @@ if (window.matchMedia('(max-width: 1450px)').matches) {
             hamburger.classList.add("shiftRight");
             hamburgerBG.classList.remove("hidden"); // Set opacity back to 1 when navbar is closed
         }
-        hamburgerBG.style.backgroundColor = "var(--transparent-color)";
-        navbar.style.backgroundColor = "var(--transparent-color)";
     }
 }
 
@@ -128,9 +120,8 @@ window.addEventListener("scroll", () => {
 
 
 // Page Load Animation for Hamburger Background
-// This plays the fadeIn animation for the hamburger background on page load and removes it after 4 seconds
+// This removes load class with fadeIn animation after x seconds
 // to prevent it from overwriting opacity settings permanently
-hamburgerBG.classList.add("load");
 setTimeout(() => {
     hamburgerBG.classList.remove("load");
-}, 4500);
+}, 2500); // 1.5 animation delay + 1s animation duration = 2.5s

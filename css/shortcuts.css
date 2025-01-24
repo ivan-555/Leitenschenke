@@ -116,8 +116,10 @@
 
 .desktop-shortcuts{
     opacity: 0;
+}
+body.page-ready .desktop-shortcuts{
     animation: slideInFromRight var(--load-duration) forwards;
-    animation-delay: 4.4s;
+    animation-delay: 2.4s;
 }
 
 @keyframes fadeInFromBottom{
@@ -137,10 +139,11 @@
 
 .mobile-shortcuts{
     opacity: 0;
-    animation: fadeInFromBottom var(--load-duration) forwards;
-    animation-delay: 3.5s;
 }
-
+body.page-ready .mobile-shortcuts{
+    animation: fadeInFromBottom var(--load-duration) forwards;
+    animation-delay: 1.5s;
+}
 
 
 

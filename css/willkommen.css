@@ -44,13 +44,16 @@
     border-radius: 50%;
 }
 
-.willkommen .landing-page i {
+.willkommen .landing-page i{
     opacity: 0;
-    animation: wiggleContinuous 4s infinite 5s, fadeIn calc(var(--load-duration) + 1s) forwards 4.8s; /* fadeIn is defined at  on page load animations underneath */
+}
+/* Page Load Animation */
+body.page-ready .willkommen .landing-page i {
+    animation: wiggleContinuous 4s infinite 3s, fadeIn calc(var(--load-duration) + 1s) forwards 2.8s; /* fadeIn is defined at  on page load animations underneath */
 }
 /* Hover effect */
 .willkommen .landing-page i:hover {
-    animation: wiggle 0.5s, fadeIn calc(var(--load-duration) + 1s) forwards 4.8s; /* restate fadeIn to not overwrite it */
+    animation: wiggle 0.5s, fadeIn calc(var(--load-duration) + 1s) forwards 2.8s; /* restate fadeIn to not overwrite it */
 }
 /* Onclick animation */
 .willkommen .landing-page i.animated {
@@ -151,16 +154,19 @@
     }
 }
 
-.willkommen .landing-page span {
+.willkommen .landing-page span{
     opacity: 0;
-    animation: fadeIn calc(var(--load-duration) + 1s) forwards; /* add 1s to the root load duration */
-    animation-delay: 2.7s; /* delays the animation after page loads */
 }
-
-.willkommen .landing-page img.heading {
-    opacity: 0;
+body.page-ready .willkommen .landing-page span {
     animation: fadeIn calc(var(--load-duration) + 1s) forwards; /* add 1s to the root load duration */
-    animation-delay: 2.7s; /* delays the animation after page loads */
+    animation-delay: .3s; /* delays the animation after page loads */
+}
+.willkommen .landing-page img.heading{
+    opacity: 0;
+}
+body.page-ready .willkommen .landing-page img.heading {
+    animation: fadeIn calc(var(--load-duration) + 1s) forwards; /* add 1s to the root load duration */
+    animation-delay: .3s; /* delays the animation after page loads */
 }
 
 
@@ -182,11 +188,12 @@
         transform: translate(0, 120px);
     }
 }
-
 .willkommen .landing-page .news{
     opacity: 0;
+}
+body.page-ready .willkommen .landing-page .news{
     animation: newsSlideInFromRight var(--load-duration) forwards;
-    animation-delay: 3s;
+    animation-delay: 2.6s;
 }
 
 
