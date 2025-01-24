@@ -3,6 +3,7 @@ window.addEventListener("load", function() {
     const preloaderIMG = preloader.querySelector("img");
 
     setTimeout(function() {
+        document.documentElement.classList.remove("no-scroll");
         preloader.style.opacity = 0;
         preloader.style.visibility = "hidden";
         preloaderIMG.style.opacity = 0;

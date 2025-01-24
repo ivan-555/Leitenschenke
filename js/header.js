@@ -27,6 +27,7 @@ let navbarStatus = "closed";
 
 hamburger.onclick = () => {
     if (navbarStatus == "closed") { //to open the navbar
+        document.documentElement.classList.add("no-scroll");
         navbar.style.transform = "translateX(0%)";
         navbarStatus = "open"; //set to open
         hamburger.classList.remove("toHamburger"); //removes toHamburger Animation
@@ -41,6 +42,7 @@ hamburger.onclick = () => {
         hamburgerBG.style.backgroundColor = "var(--accent-color-dark)";
         navbar.style.backgroundColor = "var(--accent-color-dark)";
     } else { //to close the navbar
+        document.documentElement.classList.remove("no-scroll");
         navbar.style.transform = "translateX(-100%)"; //closes navbar
         navbarStatus = "closed"; //set to closed
         hamburger.classList.remove("toX"); //remove toX Animation
@@ -65,6 +67,7 @@ const leitenschenkeLogo = document.querySelector("#navbar .logo")
 if (window.matchMedia('(max-width: 1450px)').matches) {
     navbarLinks.forEach((link) => {
         link.onclick = () => {
+            document.documentElement.classList.remove("no-scroll");
             navbar.style.transform = "translateX(-100%)"; //closes navbar
             navbarStatus = "closed"; //set to closed
             hamburger.classList.remove("toX"); //remove toX Animation
@@ -80,6 +83,7 @@ if (window.matchMedia('(max-width: 1450px)').matches) {
         }
     })
     leitenschenkeLogo.onclick = () => {
+        document.documentElement.classList.remove("no-scroll");
         navbar.style.transform = "translateX(-100%)"; //closes navbar
         navbarStatus = "closed"; //set to closed
         hamburger.classList.remove("toX"); //remove toX Animation
