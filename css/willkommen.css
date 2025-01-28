@@ -1,35 +1,41 @@
 .willkommen .landing-page{
-    /* Background Gradient ist set trough JS after Video is loaded */
     position: relative;
-    width: 100%;
     height: 100svh;
-    overflow: hidden;
-    padding: 20vh 0 0 0; /* spaces the heading from the top */
+    background: radial-gradient(circle at 50% 30%, rgba(0, 0, 0, 0.2) 10%, rgba(64, 62, 70, 0) 40%, rgba(57, 56, 61, 0.1) 90%), linear-gradient(to bottom, rgba(72, 68, 103, 0.1) 0%, rgba(72, 68, 103, 0.1) 10%, rgba(72, 68, 103, 0) 20%, rgba(72, 68, 103, 0) 100%);
 }
 
 .willkommen .landing-page #background-video {
     position: absolute;
-    top: 50%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 65%;
+    z-index: -1;
+}
+
+.willkommen .landing-page .text-wrapper{
+    position: absolute;
+    top: 20%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -1; /* Stellt das Video hinter den Inhalt */
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 80%;
+    max-width: 700px;
 }
 
 .willkommen .landing-page span{
     color: rgb(239, 239, 239);
     font-size: 1.2rem;
-    text-align: center;
-    display: block;
-    margin-bottom: 20px;
 }
 
 .willkommen .landing-page img.heading{
-    width: 700px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    width: 100%;
 }
 
 .willkommen .landing-page i {
@@ -144,6 +150,7 @@ body.page-ready .willkommen .landing-page i {
 
 
 
+
 /* Page Load Animations */
 @keyframes fadeIn {
     from {
@@ -170,12 +177,8 @@ body.page-ready .willkommen .landing-page img.heading {
 }
 
 
-
-
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 /* Arrow Down Page Load Animation is set above */
-
-
 
 
 @keyframes newsSlideInFromRight{
@@ -201,7 +204,11 @@ body.page-ready .willkommen .landing-page .news{
 
 
 
-                                         /* Media Queries */
+
+
+
+/* Media Queries */
+
 /* same vw where mobile shortcuts are shown at the bottom and desktop shortcuts are hidden which creates space above */
 @media (max-height: 750px) and (max-width: 750px) {
     /* delete transform to put the news higher to not clash with the arrow down on mobile*/
@@ -210,7 +217,7 @@ body.page-ready .willkommen .landing-page .news{
     }
 }
 
-/* font adjusts */
+/* news */
 @media screen and (max-width: 1600px){
     .willkommen .landing-page .news span{
         font-size: 1.1rem;
@@ -224,14 +231,6 @@ body.page-ready .willkommen .landing-page .news{
 @media screen and (max-width: 700px){
     .willkommen .landing-page .news span{
         font-size: 0.9rem;
-    }
-}
-@media (max-width: 600px){
-    .willkommen .landing-page img.heading{
-        width: 100%;
-    }
-    .willkommen .landing-page span{
-        font-size: 1.1rem;
     }
 }
 @media screen and (max-width: 500px){
@@ -255,21 +254,22 @@ body.page-ready .willkommen .landing-page .news{
     }
 }
 
-/* Background Video Adjustment */
+/* text wrapper */
+@media (max-width: 800px){
+    .willkommen .landing-page span{
+        font-size: 1.1rem;
+    }
+}
+@media (max-width: 600px){
+    .willkommen .landing-page .text-wrapper{
+        width: 90%;
+    }
+}
 @media (max-width: 500px){
-    .willkommen .landing-page #background-video {
-        left: 10%;
+    .willkommen .landing-page .text-wrapper{
+        width: 100%;
     }
-}
-@media (max-width: 400px){
-    .willkommen .landing-page #background-video {
-        left: 0%;
-    }
-}
-
-/* Height Querys */
-@media (max-height: 900px){
-    .willkommen .landing-page #background-video {
-        top: 40%;  /* to make more of the terasse visible */
+    .willkommen .landing-page span{
+        font-size: 1rem;
     }
 }
