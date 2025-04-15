@@ -69,7 +69,6 @@
     width: fit-content;
     height: 100%;
     transition: transform 1s ease;
-    cursor: grab;
 }
 
 .unsereGerichte .slider-container .slider.grabbing{
