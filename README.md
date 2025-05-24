@@ -1,32 +1,26 @@
-## Gasthaus Leitenschenke Webseite
+## Leitenschenke Webseite
 
 ### Projektbeschreibung
 
-Die Webseite des Gasthauses "Leitenschenke" war mein erstes komplexes, großes Projekt.
-Das Projekt konzentriert sich auf ein elegantes und modernes Design der Inhalte, ohne dabei die Benutzerfreundlichkeit zu vernachlässigen.
-Informationen über die Gastgeberfamilie, die Gerichte und die Produkte der Leitenschenke, sowie die UX bei der Seitennavigation wurden besonders benutzerfreundlich gestaltet.
-Natürlich hat die Webseite eine responsive Benutzeroberfläche, die sowohl auf Desktop- als auch auf Mobilgeräten gut funktioniert.
+Der Fokus des Projektes lag auf einem eleganten, modernen Design, ohne die Benutzerfreundlichkeit zu vernachlässigen. Besonderen Wert habe ich auf eine intuitive Seitennavigation sowie auf die ansprechende Präsentation von Informationen zur Gastgeberfamilie, den Gerichten und den Produkten der Leitenschenke gelegt. Natürlich ist die Website vollständig responsiv und funktioniert auf Desktop- wie auch auf Mobilgeräten reibungslos.
 
 ### Features
 
-- Responsives Design: Optimiert für Desktop- und Mobilgeräte.
-- Übersichtliche Navigation: Schneller Zugriff auf Informationen wie Öffnungszeiten, Telefonnummer, Standort. Strukturierte Navigationsleiste um die Seite verständlich zu navigieren.
-- Ästhetisches Layout: Stilvolles und ansprechendes Design mit klarem Fokus auf die Präsentation.
-- Interaktive Elemente: Verschiedene interaktive UI-Elemente wie die Bilder Slider für eine moderne Benutzererfahrung.
-- Animierte Inhalte: Scroll Basierte Animationen der Inhalte sowie animierte Buttons.
+- Design: Modernes und benutzerfreundliches UI und UX Design.
+- Responsive Design: Optimiert für Desktop und Mobilgeräte.
+- Preload-Animation: Beim Laden der Seite wird eine Preload-Animation angezeigt, bis die Seite vollständig geladen ist.
+- Übersichtliche Navigation: Sowohl auf Desktop als auch auf Mobilgeräten lässt sich die Seite übersichtlich mit Links navigieren.
+- Schnellzugriffe: Fixierte Shortcuts die schnellen Zugriff auf Informationen wie Öffnungszeiten, Telefonnummer und Standort bieten.
+- Interaktive Elemente: Moderne interaktive Bilderslider geben visuelle Einblicke über das Ambiente, das Panorama und über die Gerichte.
+- Animationen: Sanfte, scroll Basierte Animationen der Inhalte.
 - Mehrsprachigkeit: Schaltfläche zum umschalten zwischen Deutscher und Italienischer Sprache.
-- Ladeanimation beim Aufrufen: Beim Laden der Seite wird eine Preload Animation abgespielt, bis der Inhalt der Seite geladen wurde.
   
 ### Technologien
 
-- HTML5: Struktur und Layout
-- CSS3: Styling und Animationen
-- JavaScript ES6: Interaktivität und dynamische Inhalte
-- Git: Für Versionskontrolle
-
-### Screenshots
-
-Füge hier Screenshots der Webseite ein, um die Benutzeroberfläche und das Design zu zeigen.
+- HTML
+- CSS
+- JavaScript
+- Git
 
 ### Deployment
 
